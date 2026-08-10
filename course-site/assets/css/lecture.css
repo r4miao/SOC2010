@@ -1,0 +1,263 @@
+:root {
+  --lecture-ink: #172333;
+  --lecture-midnight: #10263d;
+  --lecture-blue: #285a91;
+  --lecture-sky: #dcecf7;
+  --lecture-cream: #fbf7ee;
+  --lecture-sand: #eee2cf;
+  --lecture-gold: #f6b846;
+  --lecture-coral: #e86f51;
+  --lecture-teal: #3e9a98;
+  --lecture-white: #ffffff;
+  --lecture-shadow: 0 22px 55px rgba(16, 38, 61, .16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+body {
+  margin: 0;
+  color: var(--lecture-ink);
+  background: var(--lecture-midnight);
+  font-family: Avenir Next, Avenir, Montserrat, Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+a { color: inherit; }
+
+.lecture-home {
+  position: fixed;
+  z-index: 20;
+  top: 1.2rem;
+  left: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .62rem .9rem;
+  border: 1px solid rgba(255,255,255,.26);
+  border-radius: 999px;
+  background: rgba(16, 38, 61, .82);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,.16);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+.lecture-home:hover { background: var(--lecture-coral); }
+
+.slide {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  padding: clamp(5.2rem, 9vh, 7rem) clamp(2rem, 7vw, 8rem) clamp(3.7rem, 8vh, 5.8rem);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -11vw;
+  bottom: -18vw;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background: rgba(246, 184, 70, .17);
+}
+.slide-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: auto;
+}
+.slide-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin-bottom: clamp(.75rem, 2vh, 1.45rem);
+  color: var(--lecture-blue);
+  font-size: clamp(.72rem, 1.1vw, .9rem);
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.slide-label::before { content: ""; width: 2rem; height: 3px; background: currentColor; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 {
+  font-family: Iowan Old Style, Palatino Linotype, Book Antiqua, Georgia, serif;
+  font-weight: 750;
+  letter-spacing: -.045em;
+}
+h1 { max-width: 860px; margin-bottom: 1.3rem; font-size: clamp(3.7rem, 8vw, 7.9rem); line-height: .93; }
+h2 { max-width: 960px; margin-bottom: 1.3rem; font-size: clamp(2.5rem, 5.1vw, 5.7rem); line-height: .97; }
+h3 { margin-bottom: .65rem; font-size: clamp(1.05rem, 1.7vw, 1.55rem); line-height: 1.18; }
+p, li { font-size: clamp(1rem, 1.45vw, 1.42rem); line-height: 1.45; }
+.intro { max-width: 790px; font-size: clamp(1.24rem, 2.2vw, 2.05rem); line-height: 1.35; }
+.small { font-size: clamp(.8rem, 1vw, 1rem); }
+.accent { color: var(--lecture-coral); }
+
+.slide-number {
+  position: absolute;
+  z-index: 2;
+  right: clamp(1.4rem, 3vw, 3.5rem);
+  bottom: clamp(1.2rem, 2.5vw, 2.4rem);
+  color: currentColor;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  opacity: .64;
+}
+.next-slide {
+  position: absolute;
+  z-index: 3;
+  right: clamp(1.35rem, 3vw, 3.2rem);
+  bottom: clamp(1rem, 2vw, 1.9rem);
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border-radius: 50%;
+  background: currentColor;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transform: translateY(-2.3rem);
+  transition: transform .18s ease;
+}
+.next-slide:hover { transform: translateY(-2.3rem) scale(1.1); }
+
+.slide-title { color: white; background: radial-gradient(circle at 82% 21%, #f6b846 0 6%, transparent 6.2%), linear-gradient(135deg, #0c2238, #164867 58%, #276e85); }
+.slide-title::before { right: -12vw; bottom: -18vw; width: 63vw; height: 63vw; background: rgba(255,255,255,.07); }
+.slide-title .slide-label, .slide-title .intro { color: #dcecf7; }
+.title-goals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: 1080px; margin-top: clamp(2rem, 6vh, 5rem); }
+.title-goal { padding: 1rem 1.1rem 1.1rem; border-top: 3px solid var(--lecture-gold); background: rgba(255,255,255,.09); font-size: clamp(.91rem, 1.2vw, 1.15rem); font-weight: 700; line-height: 1.3; }
+
+.property-slide { background: var(--lecture-cream); }
+.property-layout { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+.property-photo { position: relative; min-height: min(55vh, 550px); overflow: hidden; border-radius: 22px; box-shadow: var(--lecture-shadow); }
+.property-photo > img { width: 100%; height: 100%; min-height: inherit; object-fit: cover; }
+.property-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(10, 23, 36, .78)); }
+.property-badges { position: absolute; z-index: 1; left: 1.3rem; right: 1.3rem; bottom: 1.2rem; display: flex; flex-wrap: wrap; gap: .55rem; }
+.property-badge { padding: .46rem .67rem; border-radius: 99px; background: rgba(255,255,255,.94); color: var(--lecture-midnight); font-size: clamp(.75rem, 1.1vw, .98rem); font-weight: 850; }
+.property-notes { display: grid; gap: .9rem; }
+.property-notes h2 { margin-bottom: .3rem; }
+.property-note { padding: 1.25rem; border-left: 5px solid var(--lecture-coral); background: var(--lecture-white); box-shadow: 0 6px 18px rgba(16, 38, 61, .07); }
+.property-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }
+.property-thumbs img { width: 100%; height: 80px; border-radius: 8px; object-fit: cover; }
+
+.map-slide { background: #edf5f4; }
+.map-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(1.4rem, 4vw, 4rem); align-items: center; }
+.map-card { overflow: hidden; border-radius: 22px; box-shadow: var(--lecture-shadow); }
+.map-card img { display: block; width: 100%; max-height: 61vh; object-fit: cover; }
+.price { display: inline-block; margin-bottom: .4rem; color: var(--lecture-coral); font-family: Georgia, serif; font-size: clamp(3rem, 5vw, 5rem); font-weight: 800; letter-spacing: -.05em; }
+.listing-copy { max-width: 620px; font-size: clamp(1.35rem, 2vw, 2.1rem); line-height: 1.3; }
+
+.concept-slide { background: var(--lecture-midnight); color: white; }
+.concept-slide .slide-label { color: var(--lecture-gold); }
+.concept-slide h2 { color: white; }
+.context-mantra { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem; max-width: 820px; margin: 2.5rem 0; }
+.context-mantra span { padding: 1.2rem .9rem; background: rgba(255,255,255,.1); color: #fff5d4; font-family: Georgia, serif; font-size: clamp(1.35rem, 2.7vw, 2.6rem); font-weight: 700; text-align: center; }
+.bullet-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 4vw, 4rem); max-width: 1080px; }
+.bullet-columns ul { margin: 0; padding-left: 1.25rem; }
+.bullet-columns li { margin: .6rem 0; }
+.highlight { color: #fff0be; }
+
+.society-slide { color: #17314b; background: linear-gradient(125deg, #fff8eb 0 56%, #f0c160 56%); }
+.latin-word { display: inline-block; padding: .03em .16em; background: #17314b; color: white; font-family: Georgia, serif; font-style: italic; }
+.latin-quote { max-width: 930px; margin: 2rem 0; padding: 1.5rem 1.8rem; border-left: 6px solid var(--lecture-coral); background: rgba(255,255,255,.72); font-family: Georgia, serif; font-size: clamp(1.35rem, 2vw, 2.1rem); line-height: 1.28; }
+
+.origin-slide { background: #fffdf7; }
+.origin-layout { display: grid; grid-template-columns: .76fr 1.24fr; gap: clamp(1.4rem, 4vw, 4rem); align-items: center; }
+.portrait-frame { position: relative; width: min(100%, 360px); margin: auto; padding: 1rem 1rem 0; background: var(--lecture-gold); transform: rotate(-3deg); box-shadow: var(--lecture-shadow); }
+.portrait-frame img { display: block; width: 100%; filter: grayscale(100%) contrast(1.08); }
+.portrait-frame figcaption { padding: .8rem .25rem 1rem; font-weight: 850; text-align: center; }
+.big-definition { max-width: 780px; font-family: Georgia, serif; font-size: clamp(1.45rem, 2.5vw, 2.45rem); line-height: 1.28; }
+.origin-list { max-width: 810px; padding-left: 1.25rem; }
+.origin-list li { margin: .5rem 0; }
+
+.birth-slide { background: var(--lecture-blue); color: white; }
+.birth-slide h2 { color: white; }
+.birth-slide .slide-label { color: #fff0be; }
+.birth-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(1.5rem, 5vw, 5rem); align-items: center; }
+.birth-points { display: grid; gap: 1rem; }
+.birth-point { padding: 1rem 0 1rem 1.15rem; border-left: 4px solid var(--lecture-gold); font-size: clamp(1.12rem, 1.65vw, 1.55rem); }
+.pattern-table { width: 100%; border-radius: 14px; box-shadow: var(--lecture-shadow); }
+
+.thinkers-slide { background: #f6efe3; }
+.thinkers-slide h2 { max-width: none; }
+.thinker-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(.55rem, 1.5vw, 1.25rem); }
+.thinker { padding: .7rem .7rem 1rem; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(16,38,61,.08); text-align: center; }
+.thinker img { display: block; width: 100%; aspect-ratio: .84; object-fit: cover; object-position: top; filter: grayscale(100%); }
+.thinker b { display: block; margin-top: .65rem; color: var(--lecture-midnight); font-size: clamp(.74rem, 1vw, 1.02rem); line-height: 1.15; }
+.thinker small { display: block; margin-top: .28rem; color: #587083; font-size: clamp(.65rem, .8vw, .83rem); }
+
+.facts-slide { background: #e5f0ef; }
+.fact-stack { display: grid; gap: 1rem; max-width: 980px; }
+.fact { display: grid; grid-template-columns: 70px 1fr; gap: 1.1rem; align-items: start; padding: 1.2rem 1.3rem; background: white; border-radius: 12px; box-shadow: 0 6px 16px rgba(16,38,61,.06); }
+.fact span { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--lecture-coral); color: white; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 800; }
+.fact p { margin: 0; }
+
+.mills-slide { background: linear-gradient(120deg, #10263d 0 60%, #f6b846 60%); color: white; }
+.mills-slide h2 { color: white; }
+.mills-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center; }
+.mills-image { width: min(100%, 600px); max-height: 63vh; margin: 0 auto; object-fit: contain; filter: grayscale(100%); }
+.mills-definition { padding: 1.35rem 1.5rem; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); font-size: clamp(1.25rem, 2vw, 2rem); line-height: 1.32; }
+
+.history-slide { background: #f2dfc1; }
+.history-quote { max-width: 920px; color: var(--lecture-midnight); font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 4.7rem); font-weight: 750; line-height: 1.06; }
+.history-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: clamp(1.4rem, 5vh, 4rem); }
+.history-card { position: relative; min-height: 265px; overflow: hidden; border-radius: 18px; color: white; background: var(--lecture-midnight); }
+.history-card img { width: 100%; height: 100%; min-height: 265px; object-fit: cover; opacity: .7; }
+.history-card div { position: absolute; inset: auto 1.2rem 1.2rem; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+.history-card h3 { margin-bottom: .2rem; font-family: Georgia, serif; font-size: clamp(1.8rem, 3vw, 3.3rem); }
+.history-card p { margin-bottom: 0; }
+
+.question-slide { background: var(--lecture-coral); color: white; }
+.question-slide::before { top: -16vw; right: -10vw; bottom: auto; background: rgba(246,184,70,.35); }
+.question-slide h2 { max-width: 1020px; color: white; font-size: clamp(3.2rem, 7.5vw, 8rem); }
+.question-sub { max-width: 730px; font-family: Georgia, serif; font-size: clamp(1.35rem, 2.4vw, 2.35rem); line-height: 1.25; }
+
+.depression-slide { background: #e9edf1; }
+.depression-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(1.5rem, 5vw, 5rem); align-items: center; }
+.book-cover { display: block; width: min(100%, 360px); margin: auto; box-shadow: var(--lecture-shadow); }
+.cohort-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cohort { padding: 1.4rem; border-radius: 14px; background: white; }
+.cohort:first-child { border-top: 7px solid var(--lecture-teal); }
+.cohort:last-child { border-top: 7px solid var(--lecture-coral); }
+.cohort h3 { color: var(--lecture-midnight); }
+.cohort p { margin-bottom: 0; }
+
+.chart-slide { background: #123b57; color: white; }
+.chart-slide h2 { color: white; }
+.chart-slide .slide-label { color: #f9d67d; }
+.chart-image { display: block; width: min(100%, 820px); max-height: 58vh; margin: 1.6rem auto 0; padding: .8rem; background: white; box-shadow: var(--lecture-shadow); }
+
+.finding-slide { background: #fbf7ee; }
+.finding-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 2rem); max-width: 1080px; }
+.finding { min-height: 310px; padding: 1.8rem; border-radius: 18px; color: white; }
+.finding:first-child { background: linear-gradient(145deg, #287d7f, #1f525f); }
+.finding:last-child { background: linear-gradient(145deg, #c8564a, #8e2938); }
+.finding h3 { margin-bottom: 1rem; font-family: Georgia, serif; font-size: clamp(2rem, 3.2vw, 3.6rem); }
+
+.close-slide { background: linear-gradient(135deg, #f6b846 0 58%, #e86f51 58%); }
+.close-slide::before { top: -26vw; right: -16vw; bottom: auto; width: 58vw; height: 58vw; background: rgba(255,255,255,.2); }
+.close-quote { max-width: 1000px; color: var(--lecture-midnight); font-family: Georgia, serif; font-size: clamp(2.2rem, 5vw, 5.75rem); font-weight: 750; line-height: 1.03; }
+.close-attribution { margin-top: 1.5rem; color: #643039; font-size: clamp(1rem, 1.5vw, 1.35rem); font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+
+@media (max-width: 780px) {
+  .slide { min-height: 100svh; padding: 5.3rem 1.35rem 4.5rem; }
+  .title-goals, .property-layout, .map-layout, .bullet-columns, .origin-layout, .birth-layout, .mills-layout, .history-cards, .depression-layout, .finding-grid { grid-template-columns: 1fr; }
+  .thinker-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .property-photo { min-height: 340px; }
+  .property-thumbs img { height: 55px; }
+  .history-card { min-height: 210px; }
+  .history-card img { min-height: 210px; }
+  .context-mantra { grid-template-columns: 1fr; max-width: 300px; }
+}
+
+@media print {
+  html { scroll-snap-type: none; }
+  .lecture-home, .next-slide, .slide-number { display: none; }
+  .slide { min-height: 100vh; break-after: page; }
+}
