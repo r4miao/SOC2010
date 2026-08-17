@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SOC 2010 Chapter 2: Sociological Perspectives.">
+  <title>Chapter 2 | Sociological Perspectives | SOC 2010</title>
+  <style>
+    :root {
+      --nd-navy: #0C2340;
+      --nd-navy-2: #17365D;
+      --nd-gold: #C99700;
+      --nd-gold-light: #FFE08A;
+      --nd-cream: #FFFDF7;
+      --nd-blue-tint: #EAF2F8;
+      --nd-ink: #102A43;
+      --nd-muted: #486581;
+      --nd-red: #7A0019;
+      --shadow: 0 16px 38px rgba(12, 35, 64, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--nd-ink); background: var(--nd-cream); font-family: Georgia, 'Times New Roman', serif; line-height: 1.7; }
+    a { color: var(--nd-navy-2); }
+    .site-header { background: var(--nd-navy); color: #fff; border-bottom: 5px solid var(--nd-gold); }
+    .header-inner, .page-shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; }
+    .brand, .chapter-nav a { color: #fff; text-decoration: none; font-family: Arial, sans-serif; font-weight: 800; }
+    .brand { letter-spacing: .04em; text-transform: uppercase; font-size: .82rem; }
+    .chapter-nav { display: flex; gap: 1rem; font-size: .8rem; }
+    .chapter-nav a:hover { color: var(--nd-gold-light); }
+    .hero { padding: clamp(3rem, 8vw, 7rem) 0 3.5rem; color: #fff; background: linear-gradient(135deg, var(--nd-navy), var(--nd-navy-2)); }
+    .hero .page-shell { position: relative; }
+    .eyebrow { display: inline-block; margin-bottom: 1rem; color: var(--nd-gold-light); font: 800 .78rem/1.2 Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--nd-navy); line-height: 1.12; }
+    h1 { max-width: 900px; margin: 0 0 1.2rem; color: #fff; font-size: clamp(2.8rem, 7vw, 6.6rem); letter-spacing: -.045em; }
+    .dek { max-width: 780px; margin: 0; color: #EAF2F8; font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.45; }
+    main { padding: 3.5rem 0 6rem; }
+    .reading-grid { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    article { min-width: 0; }
+    .chapter-kicker { margin: 0 0 .6rem; color: var(--nd-red); font: 800 .78rem/1.2 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    article h2 { margin: 3.2rem 0 1rem; padding-top: 1rem; border-top: 3px solid var(--nd-gold); font-size: clamp(1.9rem, 3.6vw, 3.2rem); }
+    article h3 { margin: 2rem 0 .7rem; font-size: clamp(1.35rem, 2vw, 1.8rem); }
+    p { margin: 0 0 1.2rem; font-size: clamp(1.06rem, 1.35vw, 1.25rem); }
+    .lead { font-size: clamp(1.25rem, 1.8vw, 1.55rem); line-height: 1.55; }
+    strong { color: var(--nd-navy); }
+    .chapter-map, .learning-goals { padding: 1.3rem 1.4rem; border: 1px solid #C6D2DE; border-top: 6px solid var(--nd-gold); background: #fff; box-shadow: var(--shadow); }
+    .chapter-map h2, .learning-goals h2 { margin: 0 0 .8rem; padding: 0; border: 0; font-size: 1.35rem; }
+    .chapter-map ol, .learning-goals ul { margin: 0; padding-left: 1.3rem; }
+    .chapter-map li, .learning-goals li { margin: .35rem 0; font-family: Arial, sans-serif; font-size: .94rem; line-height: 1.45; }
+    .concept-note { position: sticky; top: 1.25rem; padding: 1rem 1.1rem; border-left: 6px solid var(--nd-gold); background: var(--nd-blue-tint); box-shadow: 0 8px 20px rgba(12,35,64,.08); }
+    .concept-note h2 { margin: 0 0 .7rem; color: var(--nd-navy); font: 850 .8rem/1.2 Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    .concept-note dl { margin: 0; }
+    .concept-note dt { margin-top: .8rem; color: var(--nd-red); font: 850 1rem/1.2 Arial, sans-serif; }
+    .concept-note dt:first-child { margin-top: 0; }
+    .concept-note dd { margin: .2rem 0 0; font-size: .95rem; line-height: 1.45; }
+    .definition { margin: 1.6rem 0; padding: 1.25rem 1.4rem; border: 2px solid var(--nd-gold); background: #fff; box-shadow: var(--shadow); }
+    .definition strong { display: block; margin-bottom: .35rem; font: 850 .78rem/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .definition p { margin: 0; font-size: 1.2rem; }
+    .scholar-box { margin: 2rem 0; padding: 1.5rem 1.6rem; border: 2px solid var(--nd-navy); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+    .scholar-box::before { content: 'Scholar in context'; display: block; margin-bottom: .6rem; color: var(--nd-red); font: 850 .75rem/1.2 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .scholar-box h3 { margin: 0 0 .7rem; font-size: 1.8rem; }
+    .scholar-box p { margin-bottom: .7rem; font-size: 1.05rem; }
+    .scholar-box p:last-child { margin-bottom: 0; }
+    .example { margin: 1.5rem 0; padding: 1.2rem 1.4rem; border-left: 6px solid var(--nd-navy-2); background: #F4F8FB; }
+    .example h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+    .example p { margin-bottom: .5rem; font-size: 1.05rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .mini-card { padding: 1rem 1.1rem; border: 1px solid #C6D2DE; background: #fff; }
+    .mini-card h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+    .mini-card p { margin: 0; font-size: 1rem; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0 1.5rem; font-family: Arial, sans-serif; font-size: .95rem; }
+    .comparison-table th { padding: .75rem; text-align: left; color: #fff; background: var(--nd-navy); }
+    .comparison-table td { padding: .75rem; vertical-align: top; border: 1px solid #C6D2DE; }
+    .comparison-table tbody tr:nth-child(even) { background: var(--nd-blue-tint); }
+    .review-box { margin-top: 2rem; padding: 1.4rem 1.5rem; color: #fff; background: var(--nd-navy); }
+    .review-box h2, .review-box h3 { margin-top: 0; color: #fff; border: 0; }
+    .review-box strong { color: #fff; }
+    .review-box li { margin: .45rem 0; font-size: 1.05rem; }
+    .source-note { font-size: .98rem; color: var(--nd-muted); }
+    .footer { padding: 2rem 0; color: #EAF2F8; background: var(--nd-navy); font-family: Arial, sans-serif; font-size: .85rem; }
+    @media (max-width: 850px) { .reading-grid { grid-template-columns: 1fr; } .concept-note { position: static; grid-row: 1; } }
+    @media (max-width: 600px) { .header-inner { align-items: flex-start; flex-direction: column; } .two-col { grid-template-columns: 1fr; } main { padding-top: 2rem; } .comparison-table { font-size: .82rem; } }
+    @media print { .site-header { color: #000; background: #fff; border-bottom: 2px solid #000; } .brand, .chapter-nav a { color: #000; } .hero { padding: 2rem 0; color: #000; background: #fff; border-bottom: 2px solid #000; } h1, .dek { color: #000; } .concept-note { position: static; } .scholar-box, .definition, .example { break-inside: avoid; box-shadow: none; } .footer { color: #000; background: #fff; border-top: 1px solid #000; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">SOC 2010 &middot; Introduction to Sociology</a>
+      <nav class="chapter-nav" aria-label="Chapter navigation"><a href="../../HTML/w2-sociological-perspectives.html">Lecture slides</a><a href="chapter-01-sociological-imagination.html">Previous chapter</a><a href="../index.html">Course home</a></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="page-shell">
+      <span class="eyebrow">Textbook &middot; Chapter 2</span>
+      <h1>Sociological Perspectives</h1>
+      <p class="dek">How theoretical lenses reveal different dimensions of social order, inequality, and interaction&mdash;and why seeing society well requires more than one point of view.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="page-shell reading-grid">
+      <article>
+        <p class="chapter-kicker">Opening question</p>
+        <p class="lead">Imagine that three sociologists walk across the same university campus. They pass classrooms, residence halls, athletic facilities, dining spaces, administrative offices, and groups of students talking between classes. They observe the same place, but they do not necessarily see the same social reality.</p>
+        <p>One notices how admissions, courses, advising, rituals, and credentials fit together to educate students and sustain the university. Another notices how tuition, institutional prestige, employment conditions, and unequal access distribute advantages among groups. A third watches a classroom discussion and asks how gestures, labels, expectations, and shared definitions shape what teachers and students do from moment to moment. None of these observers has invented a different campus. Each has selected and organized different features of it.</p>
+        <p>This is what a <strong>theoretical perspective</strong> does. Like a lens, it brings some relationships into focus while leaving others at the edge of the image. A useful perspective does not merely supply an opinion. It identifies central questions, directs attention toward certain evidence, and offers a vocabulary for connecting observations. The three major perspectives introduced in this chapter&mdash;structural functionalism, conflict theory, and symbolic interactionism&mdash;provide different images of society because they begin from different assumptions about what makes social life possible and what most needs explanation.</p>
+
+        <div class="definition"><strong>Core idea</strong><p>A sociological perspective is an organized way of viewing social life. Structural functionalism emphasizes interdependence and social order, conflict theory emphasizes inequality and power, and symbolic interactionism emphasizes meaning and interaction. Each lens reveals important processes, but each also directs attention away from some features that another lens may illuminate.</p></div>
+
+        <h2 id="perspective">1. What is a theoretical perspective?</h2>
+        <p>Introductory sociology commonly organizes the field around <strong>three major theoretical perspectives</strong>:</p>
+        <ol>
+          <li><strong>Structural functionalism</strong> presents an organic or holistic view of society and asks how interdependent structures and their functions contribute to&mdash;or disrupt&mdash;social integration and order.</li>
+          <li><strong>Conflict theory</strong> presents a divided and contested view of society and asks how groups in unequal positions struggle over resources, authority, and the power to organize social life.</li>
+          <li><strong>Symbolic interactionism</strong> presents an interactive view of society and asks how people create, interpret, negotiate, and revise meanings through social interaction.</li>
+        </ol>
+        <p>Every act of observation involves selection. We cannot attend equally to every person, rule, history, meaning, and material condition at once. A perspective helps manage that complexity. It tells us what kinds of units matter, which relationships to examine, and what sort of explanation may be useful. Structural functionalists often begin with institutions and their contributions to a larger system. Conflict theorists begin with groups, resources, and unequal power. Symbolic interactionists begin with actors interpreting situations and responding to one another.</p>
+        <p>The familiar comparison to sunglasses is useful. Different lenses can make certain contrasts easier to see. Yet theoretical perspectives are not simply colored filters that distort an otherwise obvious world. Social reality has many levels and processes. A classroom is simultaneously part of an educational institution, a setting in which authority and opportunities are unequally distributed, and an encounter whose outcome depends on participants interpreting words and gestures. The perspective determines which of these relationships becomes the starting point.</p>
+        <p>Perspectives also influence what counts as a satisfactory answer. If a rule persists, a functionalist may ask what problem it solves for a group or institution. A conflict theorist may ask who benefits from the rule and who possesses the authority to enforce it. An interactionist may ask how participants learn the rule, interpret violations, and negotiate its meaning in practice. These are not three answers to one identical question. They are related but distinct questions produced by different images of society.</p>
+
+        <aside class="example"><h3>One object, three questions</h3><p>Consider a university identification card. A functionalist asks how the card coordinates access to buildings, meals, libraries, and services. A conflict theorist asks who is granted access, who is excluded, what surveillance the card permits, and who controls the collected data. An interactionist asks how displaying the card communicates membership and how people interpret someone who cannot produce one. The physical card is the same; the analytical questions differ.</p></aside>
+
+        <div class="definition"><strong>Concept: theoretical perspective</strong><p>A broad set of assumptions and concepts that organizes an overall view of society, identifies important questions, and guides interpretation.</p></div>
+
+        <h2 id="theory">2. Theory, perspective, and level of analysis</h2>
+        <p>The words <em>theory</em> and <em>perspective</em> are sometimes used interchangeably, but distinguishing them is helpful. A <strong>scientific theory</strong> is a systematic explanation of specified relationships that can be evaluated with evidence. It generates claims about what occurs, under what conditions, and through which mechanisms. A theory may be broad, but it must expose important claims to possible correction. Evidence that consistently contradicts those claims gives researchers reason to revise or reject the theory.</p>
+        <p>A <strong>middle-range theory</strong>, a term associated with Robert K. Merton, addresses a bounded family of phenomena rather than attempting to explain society as a whole. A theory of cumulative inequality, for example, can specify how early advantages and disadvantages build across the life course. It can be tested using longitudinal evidence. Such theories stand between isolated observations and all-encompassing systems.</p>
+        <p>A theoretical perspective, sometimes called a paradigm, is broader. It supplies basic questions and interpretive commitments rather than one prediction. Conflict theory as a whole cannot be tested by a single observation because it contains many theories about labor, states, families, race, gender, organizations, and global relationships. Particular conflict-theory claims can and should be tested. The perspective itself is judged by its clarity, fertility, range, and ability to generate explanations that survive empirical investigation.</p>
+
+        <div class="two-col">
+          <div class="mini-card"><h3>Theory</h3><p>A specified explanation of relationships or mechanisms. Its claims should be open to empirical evaluation and possible falsification.</p></div>
+          <div class="mini-card"><h3>Theoretical perspective</h3><p>A broad analytical orientation that identifies central features of society and guides the questions and theories researchers develop.</p></div>
+        </div>
+
+        <h3>Macro and micro sociology</h3>
+        <p>Perspectives also differ in their usual <strong>level of analysis</strong>. Macrosociology examines large-scale and durable patterns such as institutions, class systems, states, markets, demographic change, and relationships among groups. Structural functionalism and conflict theory usually operate at this level, although both can be applied to organizations and small groups. Microsociology examines face-to-face encounters, situated behavior, identities, and the meanings people construct through interaction. Symbolic interactionism is the major microsociological perspective introduced here.</p>
+        <p>Macro and micro are differences of scale, not competing claims that only structures or only individuals are real. A labor market operates through millions of encounters in which employers evaluate applicants and workers interpret opportunities. A classroom interaction is shaped by institutional rules, occupational authority, and prior inequalities. Large patterns are produced and reproduced through action, while action occurs inside settings that participants did not create from scratch. Strong sociology often traces connections between these levels.</p>
+
+        <div class="definition"><strong>Concept: level of analysis</strong><p>The scale at which a sociologist locates the main actors and relationships in an explanation, ranging from encounters and small groups to institutions, societies, and global systems.</p></div>
+
+        <h2 id="functionalism">3. Structural functionalism: society as an interdependent system</h2>
+        <p><strong>Structural functionalism</strong> begins with an image of society as a whole composed of interrelated parts. Families, schools, economies, governments, religious organizations, legal systems, and media are social structures: relatively stable patterns of relationships and practices. A function is a consequence through which a structure contributes to the operation, adaptation, coordination, or continuity of a larger social system.</p>
+        <p>The organic analogy compares society to a living body. A body contains distinct organs, but those organs are interdependent; a change in one can affect the others. In a similar way, changes in the economy can alter family decisions, migration, education, politics, and health. The analogy directs attention to relationships among parts rather than treating institutions as isolated. It also raises questions about integration: how are specialized activities coordinated, and how does a complex society generate enough shared expectations to continue?</p>
+        <p>Because it emphasizes integration and order, structural functionalism often carries a <strong>communitarian orientation</strong>: individuals become capable of coordinated and meaningful action through their dependence on a larger moral and institutional community. Shared norms do constrain conduct, but functionalists also view that constraint as potentially enabling. Predictable rules can protect people from arbitrary force and from the uncertainty of never knowing what others will do. Dependence on society can therefore be understood as a form of liberating interdependence rather than simply a loss of freedom.</p>
+        <p>This emphasis gives classical functionalism a generally conservative analytical inclination. It tends to regard abrupt rebellion against established norms as a possible source of disorientation and to expect successful change to be gradual, adaptive, and organic. Calling the orientation conservative does not mean every functionalist supports every existing institution. It means the perspective begins by asking what sustains cohesion and what may be disrupted when one part of an interdependent system changes rapidly.</p>
+
+        <div class="scholar-box">
+          <h3>Comte, Spencer, and Durkheim: foundations of functional analysis</h3>
+          <p>Auguste Comte emphasized the need to understand social order during a period of revolution and industrial change. Herbert Spencer developed an evolutionary and organic image of societies becoming larger and more differentiated. &Eacute;mile Durkheim gave functional reasoning a more rigorous sociological form. He examined how institutions and collective practices contribute to integration, regulation, and solidarity.</p>
+          <p>Durkheim did not claim that society is literally a body. The analogy highlights interdependence. His analysis of the division of labor asked how specialized people who perform different tasks can nevertheless depend on one another. Modern differentiation may weaken older similarities, yet it can produce a new solidarity based on mutual dependence.</p>
+        </div>
+
+        <h3>Structure, function, and system requirements</h3>
+        <p>A functional analysis asks what recurring activity does within a specified system. Education, for example, transmits knowledge, develops skills, coordinates transitions into occupations, and communicates civic and cultural expectations. It also sorts students through grades and credentials, creates peer networks, supports research, and provides employment. These consequences connect education to families, labor markets, governments, and communities.</p>
+        <p>The word <em>function</em> must be used carefully. To say that a practice has a function does not mean that everyone benefits equally, that the practice was intentionally designed for that purpose, or that it is morally good. A structure can contribute to the stability of one institution while imposing costs on another group. Nor does usefulness prove why a practice originated. Explaining persistence requires historical and comparative evidence, not the circular statement that something exists because society needs it.</p>
+
+        <div class="scholar-box">
+          <h3>Robert K. Merton: making functionalism more empirical</h3>
+          <p>Robert K. Merton (1910&ndash;2003) reshaped American sociology by replacing highly abstract, all-encompassing systems with <strong>theories of the middle range</strong>: explanations limited enough to be connected closely to observation and empirical testing. His work ranged across bureaucracy, deviance, mass communication, reference groups, social stratification, and the sociology of science.</p>
+          <p>Within functional analysis, Merton rejected three sweeping assumptions: that every established practice benefits society, that every part is indispensable, and that a practice has the same consequences for every group. He distinguished <strong>functions</strong> from <strong>dysfunctions</strong> and <strong>manifest</strong> consequences from <strong>latent</strong> consequences. These distinctions show how an institution can achieve an announced purpose, create unrecognized benefits, and impose hidden costs at the same time.</p>
+          <p>Merton also developed concepts that traveled far beyond functionalism, including <strong>strain theory</strong>, the <strong>self-fulfilling prophecy</strong>, <strong>role model</strong>, and the <strong>Matthew effect</strong>&mdash;the cumulative advantage through which already prominent scientists tend to receive disproportionate recognition. Across these contributions, his central style was consistent: turn broad theoretical ideas into concepts that could organize concrete empirical research.</p>
+        </div>
+
+        <table class="comparison-table">
+          <thead><tr><th scope="col">Consequence</th><th scope="col">University example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Manifest function</strong><br>Intended and beneficial for the specified system or group</td><td>Courses teach disciplinary knowledge and skills; degrees certify that students completed a program.</td></tr>
+            <tr><td><strong>Latent function</strong><br>Unintended or not openly recognized, but beneficial</td><td>Students form friendships, professional networks, and sometimes long-term partnerships while pursuing a degree.</td></tr>
+            <tr><td><strong>Manifest dysfunction</strong><br>Recognized or intended process that creates costs</td><td>A demanding evaluation system may knowingly generate stress as it attempts to maintain standards and rank performance.</td></tr>
+            <tr><td><strong>Latent dysfunction</strong><br>Unintended or initially unrecognized cost</td><td>Credential requirements may expand, increasing the time and debt needed for jobs whose tasks have changed very little.</td></tr>
+          </tbody>
+        </table>
+
+        <aside class="example"><h3>Applying functionalism to factories and sweatshops</h3><p>A classical functionalist might observe that factories coordinate labor, increase production, lower prices, and connect workers to an expanding economic system. That analysis identifies system consequences but does not settle whether dangerous conditions or low wages are just. A complete analysis must also identify dysfunctions, unequal effects, alternatives, and the possibility that an arrangement persists because powerful actors benefit from it. This boundary leads directly to conflict theory.</p></aside>
+
+        <h3>What functionalism reveals&mdash;and what it may miss</h3>
+        <p>Functionalism is especially useful for studying interdependence, institutional consequences, social integration, and the problems that recurring practices address. It encourages sociologists to look beyond motives: people may participate for one reason while their actions produce much wider consequences. It also helps explain why rapid change in one institution can create strain elsewhere.</p>
+        <p>Its central danger is treating persistence as proof of necessity or benefit. The language of stability can make inequality appear natural, understate coercion, and struggle to explain conflict-driven transformation. Classical versions sometimes assumed too much consensus and gradual adaptation. Merton&rsquo;s distinctions reduce these problems, but functional analysis remains strongest when paired with historical evidence and explicit attention to groups that bear an arrangement&rsquo;s costs.</p>
+
+        <h2 id="conflict">4. Conflict theory: society as unequal and contested</h2>
+        <p><strong>Conflict theory</strong> pictures society as composed of groups whose interests differ and whose access to valued resources is unequal. Wealth, income, property, authority, security, education, prestige, and control over institutions are not distributed evenly. Groups compete over these resources and over the rules that govern their distribution. Social order, from this perspective, rests not only on agreement but also on domination, bargaining, dependence, and the capacity of some actors to impose costs on others.</p>
+        <p>Power is therefore central. Power is not limited to direct physical force. It includes control over jobs, investment, law, organizational decisions, information, cultural representation, and the categories through which problems are understood. A rule can appear neutral while protecting advantages accumulated under earlier arrangements. Conflict analysis asks who designed the rule, whose interests it serves, who can challenge it, and what happens to those who refuse.</p>
+
+        <div class="scholar-box">
+          <h3>Karl Marx: class conflict and capitalism</h3>
+          <p>Karl Marx (1818&ndash;1883) analyzed history through changing modes of production: arrangements for producing material life and organizing control over productive resources. In capitalist societies, the central relationship joins and divides the <strong>bourgeoisie</strong>, who own or control capital, and the <strong>proletariat</strong>, who must sell their labor power for wages.</p>
+          <p>Marx treated capitalism as historically dynamic rather than permanently stable. Competition pushes owners to reorganize production, adopt technology, seek new markets, and control labor costs. These processes can greatly expand productive capacity while concentrating wealth, displacing workers, creating insecurity, and intensifying conflict over how the gains from production are distributed.</p>
+        </div>
+
+        <aside class="example">
+          <h3>The classical version of conflict theory</h3>
+          <p>Classical Marxist conflict theory offers a categorically paired and revolutionary image of capitalist society: bourgeoisie and proletariat occupy asymmetrical positions, pursue competing interests, and struggle over control of production and its rewards. Its account of capitalism&rsquo;s predicted self-destruction follows a historical sequence:</p>
+          <ol>
+            <li>Land is consolidated and commercialized, displacing many peasants while owners invest accumulated wealth in industrial production.</li>
+            <li>Displaced peasants enter cities and become wage laborers who must sell their capacity to work to those who own factories, machinery, and capital.</li>
+            <li>Competition pushes capitalists to reorganize work, adopt labor-saving innovations, concentrate production, and hold labor costs down in pursuit of profit.</li>
+            <li>Workers lose control over the labor process and become increasingly subordinated to machines and managerial authority. Technological displacement and competition for employment weaken their bargaining position.</li>
+            <li>As workers become more numerous, concentrated, and conscious of their common position, worsening insecurity and exploitation create the conditions for organized class struggle and, Marx predicted, the revolutionary overthrow of capitalist rule.</li>
+          </ol>
+          <p>The classical account also asks how a relatively small owning class retains power. One mechanism is <strong>coercive force</strong>, including the state&rsquo;s capacity to enforce property relations and suppress challenges. A second is a <strong>legitimating belief system</strong> that makes existing arrangements appear natural, fair, or inevitable. When dominated groups interpret the system through ideas that conceal their structural interests, classical Marxists describe the result as <strong>false consciousness</strong>. This version therefore expects major change to emerge through power struggle, which may be dramatic or violent. Later conflict theories retain the focus on unequal power without necessarily accepting Marx&rsquo;s prediction of proletarian revolution.</p>
+        </aside>
+
+        <h3>A conflict history of social organization</h3>
+        <p>Classical Marxist analysis describes historical systems through paired positions formed by control over production: slave owners and enslaved people, feudal aristocracies and peasants, capitalists and wage workers. These are not simply groups who dislike one another. Their relationship is structural because their opportunities and interests arise from different positions in an economic order. Owners seek returns and control over production; workers seek wages, security, autonomy, and a greater share of what their labor produces.</p>
+        <p>Conflict does not require constant open rebellion. It may appear as union organization, strikes, elections, regulation, litigation, workplace resistance, capital relocation, or disputes over schedules and pay. Cooperation can also occur, but it takes place within unequal relationships. Employers need labor and workers need income, yet their interdependence does not erase conflict over who decides and who receives the surplus.</p>
+
+        <h3>Coercion, legitimacy, and ideology</h3>
+        <p>How do unequal arrangements persist when disadvantaged groups are more numerous? One answer is coercion: states and organizations can use law, discipline, dismissal, policing, and, at the limit, physical force. Yet force alone is expensive and unstable. Durable power also requires legitimacy&mdash;the belief that existing authority, rules, or inequalities are proper, inevitable, or at least tolerable.</p>
+        <p>Conflict theorists therefore study ideology and the production of consent. Dominant ideas may present a particular arrangement as common sense, define private ownership or hierarchy as natural, or explain unequal outcomes entirely through individual merit. People are not passive containers into which ideas are poured. They interpret, negotiate, and resist. Nevertheless, groups with greater control over education, media, workplaces, law, and political institutions possess greater capacity to circulate definitions that protect their position.</p>
+
+        <div class="definition"><strong>Concept: ideology</strong><p>A system of ideas and assumptions that interprets social reality, defines what appears legitimate or natural, and may support or challenge existing relations of power.</p></div>
+
+        <h3>Modern conflict theory</h3>
+        <p>Later conflict approaches extend beyond the relationship between capitalists and workers. Sociologists examine conflicts structured by race, ethnicity, gender, citizenship, religion, age, sexuality, occupation, organizational rank, and position in the global economy. Feminist theories analyze power in households, workplaces, states, and cultural representations. Racial-conflict approaches study how law, organizations, wealth, and classification reproduce racialized advantages. World-systems and postcolonial perspectives examine unequal relationships among regions and nations.</p>
+        <p>The extension must be handled carefully. Not every difference creates two internally unified camps, and people occupy several categories at once. Interests can overlap, identities can change, and disadvantaged groups can be divided. The value of modern conflict theory lies not in forcing every relationship into a simple oppressor-versus-victim pair, but in examining asymmetrical positions, competing interests, control over resources, and the mechanisms through which inequality is reproduced or challenged.</p>
+
+        <aside class="example"><h3>Applying conflict theory to higher education</h3><p>A conflict analysis asks who can afford to enroll, who accumulates debt, which institutions command prestige, whose knowledge becomes part of the curriculum, and how credentials allocate access to desirable occupations. It also examines relations among governing boards, administrators, faculty, staff, students, donors, governments, and employers. The university may expand opportunity while simultaneously reproducing class advantages; those outcomes can coexist.</p></aside>
+
+        <h3>What conflict theory reveals&mdash;and what it may miss</h3>
+        <p>Conflict theory makes inequality, domination, historical struggle, and social change visible. It reminds us that institutions can survive because influential groups defend them, not only because they benefit everyone. It directs empirical attention to ownership, decision-making, agenda setting, enforcement, and the unequal capacity to define reality.</p>
+        <p>Its danger is reductionism. If every norm becomes disguised domination and every relationship becomes a power struggle, the perspective can overlook genuine solidarity, shared interests, institutional coordination, and meanings that cannot be inferred from social position. Paired categories may conceal disagreement within groups and cooperation across them. Strong conflict analysis specifies the resource at stake, identifies the mechanism of power, and tests whether the proposed interests actually organize behavior.</p>
+
+        <h2 id="interactionism">5. Symbolic interactionism: society through meaning and interaction</h2>
+        <p><strong>Symbolic interactionism</strong> begins with people acting in situations they must interpret. Humans do not respond mechanically to objects or events. They respond to what those objects and events mean. A red light, wedding ring, grade, uniform, raised hand, or online profile becomes socially consequential because people learn shared meanings and use them to anticipate one another&rsquo;s actions.</p>
+        <p>Symbols are gestures, objects, sounds, images, or words that represent something beyond themselves. Language is an especially powerful symbolic system because it allows people to name categories, recall the past, imagine futures, formulate rules, and view themselves from the standpoint of others. Shared symbols make coordinated action possible, but meanings are never perfectly fixed. They can vary by context, group, and history, and they can be disputed.</p>
+
+        <h3>Max Weber: social action and interpretive understanding</h3>
+        <p>Max Weber was not a symbolic interactionist in the later Chicago-school sense, but his <strong>interpretive sociology</strong> helped establish a crucial foundation for meaning-centered analysis. Weber argued that sociology must study <strong>social action</strong>: conduct to which an actor attaches a subjective meaning and which is oriented toward the behavior of other people. An identical outward movement can therefore be a greeting, warning, insult, ritual, or accidental gesture depending on what the actor intends and how others understand it.</p>
+        <p>Weber used the term <strong><em>Verstehen</em></strong>, or interpretive understanding, for the effort to reconstruct the meanings actors attach to their conduct. Understanding meaning was not an alternative to causal explanation. It was necessary for identifying what action was taking place and explaining its course and consequences. Weber&rsquo;s work also shows that meaning-centered sociology need not remain exclusively micro: shared religious ideas, definitions of legitimate authority, and orientations toward work can become organized into institutions and contribute to large historical transformations.</p>
+
+        <div class="scholar-box">
+          <h3>George Herbert Mead and Herbert Blumer: mind, self, and meaning</h3>
+          <p>George Herbert Mead developed an account of the mind and self as social processes. Through communication and <strong>role-taking</strong>, people learn to imagine how others view a situation and how others may respond. The self is therefore not formed in isolation; it emerges as people become objects to themselves and interpret their own conduct from social standpoints.</p>
+          <p>Herbert Blumer later named symbolic interactionism and summarized three premises: people act toward things on the basis of their meanings; meanings arise through social interaction; and meanings are handled and modified through interpretation. The perspective presents society as an ongoing accomplishment rather than a finished structure standing outside interaction.</p>
+        </div>
+
+        <h3>The three premises in practice</h3>
+        <ol>
+          <li><strong>Action follows meaning.</strong> A student responds differently to the same comment depending on whether it is understood as advice, criticism, humor, or discrimination.</li>
+          <li><strong>Meaning arises socially.</strong> Students learn what office hours, participation, plagiarism, and professionalism mean through instructions, observation, correction, and conversations with others.</li>
+          <li><strong>Meaning is interpreted in context.</strong> People do not merely retrieve a fixed definition. They consider who spoke, where the encounter occurred, what happened before it, and how others are reacting.</li>
+        </ol>
+        <p>These premises make interaction active and contingent. Two people can define the same situation differently, producing confusion or conflict. Through further interaction they may establish a shared definition, maintain competing definitions, or change the activity itself. Social order at the micro level depends on repeated interpretive work.</p>
+
+        <h3>The definition of the situation</h3>
+        <p>Before people act together, they must answer an often-unspoken question: <em>What is happening here?</em> Is a gathering a lecture, debate, ceremony, protest, party, or emergency? Each definition carries expectations about appropriate roles and conduct. A student talking loudly is normal at a party but may be sanctioned during an exam. The behavior cannot be understood apart from the meaning of the setting.</p>
+        <p>Definitions can also produce real consequences. If teachers define a student as promising, they may provide more encouragement and opportunities; if others accept the definition, it can shape the student&rsquo;s identity and later performance. Labeling does not magically create every outcome, but categories alter interaction. Sociologists therefore study how labels are assigned, how people respond to them, and how repeated responses stabilize reputations and identities.</p>
+
+        <div class="definition"><strong>Concept: definition of the situation</strong><p>A participant&rsquo;s interpretation of what is happening in an encounter, including the identities, purposes, rules, and actions considered relevant.</p></div>
+
+        <h3>Goffman and the presentation of self</h3>
+        <p>Erving Goffman extended microsociological analysis by examining how people manage impressions in everyday encounters. His dramaturgical language compares interaction to performance. People use speech, clothing, posture, settings, and supporting objects to present a particular self to an audience. A job interview, classroom presentation, medical appointment, and social-media post involve different audiences and therefore different performances.</p>
+        <p>This does not mean that social life is simply fake. A performance can be sincere and still be organized for an audience. Interaction requires people to make some information visible, keep other information in the background, and cooperate in maintaining a workable situation. Embarrassment occurs when a performance breaks down or incompatible definitions become visible.</p>
+
+        <aside class="example"><h3>A classroom as an interaction order</h3><p>A syllabus establishes formal expectations, but an actual class also develops through repeated encounters. Students learn whether questions are welcomed, what silence means, how strictly deadlines are interpreted, and which forms of disagreement are acceptable. The instructor reads faces, pauses, attendance, and submitted work; students read tone, feedback, and one another&rsquo;s reactions. Through these interpretations, a classroom culture emerges.</p></aside>
+
+        <h3>Berger and Luckmann: how interaction becomes social reality</h3>
+        <p>Peter L. Berger and Thomas Luckmann extended the interpretive tradition in <em>The Social Construction of Reality</em>. Their central question was how meanings produced by people come to confront later actors as an objective social world. Repeated actions become habits; when people develop reciprocal expectations around those habits, practices become institutionalized. Language and shared knowledge classify these arrangements, while explanations and legitimating stories make them appear reasonable, natural, or inevitable.</p>
+        <p>They described this relationship between people and society as a continuing dialectic of <strong>externalization, objectivation, and internalization</strong>. In externalization, people express themselves and produce practices, roles, categories, and institutions. Through objectivation, these human products acquire an apparently external and factual reality: &ldquo;the way we do things&rdquo; becomes simply &ldquo;the way things are.&rdquo; Through internalization, new members encounter this world through socialization, learn its categories as reality, and incorporate its roles and meanings into their identities.</p>
+        <p>This account contributes an important bridge between symbolic interaction and social structure. A classroom rule begins in human action, becomes stabilized in routines and written policies, and is then learned by students as a preexisting fact. Yet because institutions remain dependent on ongoing interpretation and enactment, people can reproduce them differently, challenge their legitimacy, or transform them. Society is therefore both a human product and an objective reality that shapes its producers.</p>
+
+        <h3>What interactionism reveals&mdash;and what it may miss</h3>
+        <p>Symbolic interactionism reveals how meaning, identity, labeling, emotion, and coordination are produced in everyday life. It prevents sociologists from assuming that an institution or category has the same meaning for everyone. Close observation and interviews can show how formal rules are enacted, bent, or transformed in practice.</p>
+        <p>Its danger is losing sight of durable inequalities and institutions that shape encounters before participants arrive. A conversation between a supervisor and employee cannot be explained only through gestures; either person&rsquo;s ability to end the relationship is unequal. Interactionists can address power and history, but a narrowly local study may understate them. The strongest analyses connect situated meaning to organizational and structural conditions.</p>
+
+        <h2 id="comparison">6. Comparing the three perspectives</h2>
+        <p>The perspectives differ in emphasis, not in whether order, conflict, and meaning exist. Functionalists recognize conflict, conflict theorists recognize coordination, and interactionists recognize institutions. The difference is analytical priority: which process provides the starting image and which outcomes most urgently require explanation.</p>
+
+        <table class="comparison-table">
+          <thead><tr><th scope="col">Dimension</th><th scope="col">Structural functionalism</th><th scope="col">Conflict theory</th><th scope="col">Symbolic interactionism</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Image of society</strong></td><td>An interdependent system of structures and functions</td><td>An unequal and contested arrangement of groups and resources</td><td>An ongoing process created through meaningful interaction</td></tr>
+            <tr><td><strong>Typical level</strong></td><td>Macro</td><td>Macro</td><td>Micro</td></tr>
+            <tr><td><strong>Central problem</strong></td><td>How are order, integration, and continuity achieved?</td><td>How are power and inequality produced, maintained, and challenged?</td><td>How do people construct meaning, identity, and coordinated action?</td></tr>
+            <tr><td><strong>View of order</strong></td><td>Interdependence, norms, consensus, and regulation</td><td>Domination, unequal bargaining, legitimacy, and coercion</td><td>Shared definitions, role-taking, and negotiated expectations</td></tr>
+            <tr><td><strong>View of change</strong></td><td>Adaptation, differentiation, strain, and re-equilibration</td><td>Competition, contradiction, mobilization, and power struggle</td><td>Reinterpretation, labeling, identity work, and changing interaction</td></tr>
+            <tr><td><strong>Common blind spot</strong></td><td>May legitimize inequality or understate conflict</td><td>May reduce social life to domination and paired interests</td><td>May understate large institutions, history, and material power</td></tr>
+          </tbody>
+        </table>
+
+        <h3>The same university through three lenses</h3>
+        <p>From a functionalist perspective, a university transmits knowledge, develops occupational skills, conducts research, socializes students into shared expectations, and connects young adults to wider networks. Departments, advising, libraries, housing, athletics, and administration perform different activities that must be coordinated. Enrollment changes, new technologies, or funding cuts in one part can create strain throughout the institution.</p>
+        <p>From a conflict perspective, the university distributes scarce credentials, status, employment, and access to influential networks. Families possess unequal resources for gaining admission and completing degrees. Institutions compete for rankings, tuition, donations, and public funds. Within the university, groups contest budgets, curricula, working conditions, speech rules, and authority. Education can promote mobility while also converting prior advantage into credentials that appear meritocratic.</p>
+        <p>From an interactionist perspective, university life is built through encounters in classrooms, offices, residence halls, laboratories, teams, and online systems. Students learn what it means to appear prepared, intelligent, difficult, professional, or out of place. Faculty and students interpret participation, accents, clothing, email tone, grades, and silence. These meanings shape belonging and identity, and repeated interactions can reproduce or challenge institutional patterns.</p>
+        <p>The accounts are compatible in some respects but not automatically interchangeable. A functional claim that grading sorts students for occupational roles may conflict with evidence that grading reproduces unequal opportunity. An interactionist account can show how evaluators construct judgments of merit, while conflict analysis asks how those judgments distribute resources. Combining perspectives works only when the relationships among their claims are made explicit.</p>
+
+        <h2 id="practice">7. Using perspectives as analytical tools</h2>
+        <p>Students sometimes treat the three perspectives as labels to attach after an explanation has already been written. A better approach is to let each perspective generate questions. Begin with a concrete institution, event, or interaction and deliberately shift lenses.</p>
+        <ol>
+          <li><strong>Define the phenomenon.</strong> What practice, institution, relationship, or encounter are you trying to explain?</li>
+          <li><strong>Map structures and interdependence.</strong> What recurring parts are involved? What intended and unintended consequences do they produce? For whom are those consequences functional or dysfunctional?</li>
+          <li><strong>Map resources and power.</strong> Which groups have different interests? Who controls valued resources, decisions, enforcement, and public definitions? How can others comply, negotiate, or resist?</li>
+          <li><strong>Map symbols and interpretations.</strong> What does the situation mean to participants? How are identities and expectations communicated? Where do definitions agree or conflict?</li>
+          <li><strong>Connect levels.</strong> How do repeated interactions reproduce or alter organizational rules? How do institutions and inequalities shape what can happen in the encounter?</li>
+          <li><strong>Evaluate with evidence.</strong> Which claims could be compared across groups, settings, or time? What evidence would weaken your preferred explanation?</li>
+        </ol>
+
+        <aside class="example"><h3>Practice case: remote work</h3><p>A functionalist can study how remote work maintains production and changes coordination, family schedules, offices, and cities. A conflict theorist can examine who receives flexibility, who bears monitoring costs, and how employers and workers bargain over control. An interactionist can analyze how people communicate availability, commitment, authority, and collegiality through screens and messages. Connecting the lenses produces a richer explanation than declaring remote work simply good or bad.</p></aside>
+
+        <h3>Perspectives are tools, not teams</h3>
+        <p>A perspective should not become a loyalty test. Sociologists do not improve an explanation by deciding in advance that order, power, or meaning must always be the most important cause. The task is to formulate clear claims, identify mechanisms, compare plausible alternatives, and use evidence to determine which explanation works best for the question at hand.</p>
+        <p>Perspectives nevertheless matter because evidence does not organize itself. Researchers decide what to measure, whom to compare, where to look, and what patterns require explanation. Becoming conscious of perspective makes those decisions more visible. It also makes productive disagreement possible: scholars can ask whether they differ about evidence, about the interpretation of evidence, or about the prior question their lens led them to pose.</p>
+
+        <p class="source-note"><strong>Further reading:</strong> &Eacute;mile Durkheim, <em>The Division of Labor in Society</em>; Robert K. Merton, <em>Social Theory and Social Structure</em>; Karl Marx and Friedrich Engels, <em>The Communist Manifesto</em>; Karl Marx, <em>Capital</em>; Max Weber, <em>Economy and Society</em>; George Herbert Mead, <em>Mind, Self, and Society</em>; Herbert Blumer, <em>Symbolic Interactionism</em>; Erving Goffman, <em>The Presentation of Self in Everyday Life</em>; and Peter L. Berger and Thomas Luckmann, <em>The Social Construction of Reality</em>.</p>
+
+        <section class="review-box" aria-labelledby="chapter-review">
+          <h2 id="chapter-review">Chapter review</h2>
+          <h3>Essential ideas</h3>
+          <ul>
+            <li>A theoretical perspective is a broad lens that organizes questions and interpretation; a scientific theory offers more specified, empirically evaluable explanations.</li>
+            <li>Macrosociology studies large-scale structures and patterns, while microsociology studies situated interaction and meaning. Strong explanations often connect the two levels.</li>
+            <li>Structural functionalism emphasizes interdependence, functions, integration, and order; its communitarian orientation generally favors gradual, organic change.</li>
+            <li>Merton distinguished functions from dysfunctions and manifest consequences from latent consequences while advancing empirically testable theories of the middle range.</li>
+            <li>Conflict theory emphasizes unequal resources, competing interests, power, domination, legitimacy, and social change. Its classical Marxist version predicts that capitalism&rsquo;s contradictions generate revolutionary class struggle.</li>
+            <li>Symbolic interactionism emphasizes symbols, socially produced meanings, interpretation, role-taking, identities, and definitions of situations. Weber&rsquo;s interpretive sociology helped prepare this orientation.</li>
+            <li>Berger and Luckmann explained how interaction produces institutions that become objectivated and then internalized as social reality.</li>
+            <li>Each perspective reveals important features and carries characteristic blind spots. Perspectives should generate testable questions rather than predetermined conclusions.</li>
+          </ul>
+          <h3>Questions for study</h3>
+          <ol>
+            <li>How does a theoretical perspective differ from a scientific or middle-range theory?</li>
+            <li>What is the difference between macro- and microsociology, and how can the two levels be connected?</li>
+            <li>How did Merton refine classical structural functionalism?</li>
+            <li>Why does identifying a function not prove that an institution is beneficial, necessary, or morally justified?</li>
+            <li>How does classical conflict theory explain both capitalism&rsquo;s predicted self-destruction and the persistence of capitalist power?</li>
+            <li>What are the three premises of symbolic interactionism, and how did Weber&rsquo;s concept of social action help prepare this perspective?</li>
+            <li>How do externalization, objectivation, and internalization connect interaction to institutional reality?</li>
+            <li>How would each perspective analyze a university, workplace, family, or social-media platform?</li>
+            <li>What does each perspective tend to reveal, and what does it tend to overlook?</li>
+          </ol>
+        </section>
+      </article>
+
+      <aside>
+        <section class="chapter-map" aria-labelledby="map-title">
+          <h2 id="map-title">Chapter map</h2>
+          <ol>
+            <li><a href="#perspective">Perspective as a lens</a></li>
+            <li><a href="#theory">Theory and level of analysis</a></li>
+            <li><a href="#functionalism">Structural functionalism</a></li>
+            <li><a href="#conflict">Conflict theory</a></li>
+            <li><a href="#interactionism">Symbolic interactionism</a></li>
+            <li><a href="#comparison">Comparing perspectives</a></li>
+            <li><a href="#practice">Using the perspectives</a></li>
+          </ol>
+        </section>
+        <section class="concept-note" aria-labelledby="concept-title">
+          <h2 id="concept-title">Key concepts</h2>
+          <dl>
+            <dt>Theoretical perspective</dt><dd>A broad lens that organizes sociological questions and interpretations.</dd>
+            <dt>Macro / micro</dt><dd>Large-scale structures and patterns / situated interaction and meaning.</dd>
+            <dt>Function</dt><dd>A consequence that contributes to a specified system or group.</dd>
+            <dt>Dysfunction</dt><dd>A consequence that creates strain or interferes with operation.</dd>
+            <dt>Manifest / latent</dt><dd>Recognized and intended / unrecognized or unintended.</dd>
+            <dt>Power</dt><dd>The capacity to shape decisions, resources, conduct, or definitions.</dd>
+            <dt>Ideology</dt><dd>Ideas that interpret and legitimize or challenge social arrangements.</dd>
+            <dt>Symbol</dt><dd>Something that carries a socially learned meaning beyond itself.</dd>
+            <dt><em>Verstehen</em></dt><dd>Interpretive understanding of the subjective meaning actors attach to social action.</dd>
+            <dt>Definition of the situation</dt><dd>An interpretation of what is happening and which conduct fits.</dd>
+            <dt>Social construction</dt><dd>The process through which human meanings and practices become institutionalized, objectivated, and internalized as reality.</dd>
+          </dl>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><div class="page-shell">SOC 2010 &middot; Introduction to Sociology &middot; Chapter 2</div></footer>
+</body>
+</html>

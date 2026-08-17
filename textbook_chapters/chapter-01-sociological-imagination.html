@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SOC 2010 Chapter 1: Sociological Imagination.">
+  <title>Chapter 1 | Sociological Imagination | SOC 2010</title>
+  <style>
+    :root {
+      --nd-navy: #0C2340;
+      --nd-navy-2: #17365D;
+      --nd-gold: #C99700;
+      --nd-gold-light: #FFE08A;
+      --nd-cream: #FFFDF7;
+      --nd-blue-tint: #EAF2F8;
+      --nd-ink: #102A43;
+      --nd-muted: #486581;
+      --nd-red: #7A0019;
+      --shadow: 0 16px 38px rgba(12, 35, 64, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--nd-ink); background: var(--nd-cream); font-family: Georgia, 'Times New Roman', serif; line-height: 1.7; }
+    a { color: var(--nd-navy-2); }
+    .site-header { background: var(--nd-navy); color: #fff; border-bottom: 5px solid var(--nd-gold); }
+    .header-inner, .page-shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; }
+    .brand, .chapter-nav a { color: #fff; text-decoration: none; font-family: Arial, sans-serif; font-weight: 800; }
+    .brand { letter-spacing: .04em; text-transform: uppercase; font-size: .82rem; }
+    .chapter-nav { display: flex; gap: 1rem; font-size: .8rem; }
+    .chapter-nav a:hover { color: var(--nd-gold-light); }
+    .hero { padding: clamp(3rem, 8vw, 7rem) 0 3.5rem; color: #fff; background: linear-gradient(135deg, var(--nd-navy), var(--nd-navy-2)); }
+    .hero .page-shell { position: relative; }
+    .eyebrow { display: inline-block; margin-bottom: 1rem; color: var(--nd-gold-light); font: 800 .78rem/1.2 Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--nd-navy); line-height: 1.12; }
+    h1 { max-width: 900px; margin: 0 0 1.2rem; color: #fff; font-size: clamp(2.8rem, 7vw, 6.6rem); letter-spacing: -.045em; }
+    .dek { max-width: 780px; margin: 0; color: #EAF2F8; font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.45; }
+    main { padding: 3.5rem 0 6rem; }
+    .reading-grid { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    article { min-width: 0; }
+    .chapter-kicker { margin: 0 0 .6rem; color: var(--nd-red); font: 800 .78rem/1.2 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    article h2 { margin: 3.2rem 0 1rem; padding-top: 1rem; border-top: 3px solid var(--nd-gold); font-size: clamp(1.9rem, 3.6vw, 3.2rem); }
+    article h3 { margin: 2rem 0 .7rem; font-size: clamp(1.35rem, 2vw, 1.8rem); }
+    p { margin: 0 0 1.2rem; font-size: clamp(1.06rem, 1.35vw, 1.25rem); }
+    .lead { font-size: clamp(1.25rem, 1.8vw, 1.55rem); line-height: 1.55; }
+    strong { color: var(--nd-navy); }
+    .chapter-map, .learning-goals { padding: 1.3rem 1.4rem; border: 1px solid #C6D2DE; border-top: 6px solid var(--nd-gold); background: #fff; box-shadow: var(--shadow); }
+    .chapter-map h2, .learning-goals h2 { margin: 0 0 .8rem; padding: 0; border: 0; font-size: 1.35rem; }
+    .chapter-map ol, .learning-goals ul { margin: 0; padding-left: 1.3rem; }
+    .chapter-map li, .learning-goals li { margin: .35rem 0; font-family: Arial, sans-serif; font-size: .94rem; line-height: 1.45; }
+    .concept-note { position: sticky; top: 1.25rem; padding: 1rem 1.1rem; border-left: 6px solid var(--nd-gold); background: var(--nd-blue-tint); box-shadow: 0 8px 20px rgba(12,35,64,.08); }
+    .concept-note h2 { margin: 0 0 .7rem; color: var(--nd-navy); font: 850 .8rem/1.2 Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    .concept-note dl { margin: 0; }
+    .concept-note dt { margin-top: .8rem; color: var(--nd-red); font: 850 1rem/1.2 Arial, sans-serif; }
+    .concept-note dt:first-child { margin-top: 0; }
+    .concept-note dd { margin: .2rem 0 0; font-size: .95rem; line-height: 1.45; }
+    .definition { margin: 1.6rem 0; padding: 1.25rem 1.4rem; border: 2px solid var(--nd-gold); background: #fff; box-shadow: var(--shadow); }
+    .definition strong { display: block; margin-bottom: .35rem; font: 850 .78rem/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .definition p { margin: 0; font-size: 1.2rem; }
+    .scholar-box { margin: 2rem 0; padding: 1.5rem 1.6rem; border: 2px solid var(--nd-navy); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+    .scholar-box::before { content: 'Scholar in context'; display: block; margin-bottom: .6rem; color: var(--nd-red); font: 850 .75rem/1.2 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .scholar-box h3 { margin: 0 0 .7rem; font-size: 1.8rem; }
+    .scholar-box p { margin-bottom: .7rem; font-size: 1.05rem; }
+    .scholar-box p:last-child { margin-bottom: 0; }
+    .example { margin: 1.5rem 0; padding: 1.2rem 1.4rem; border-left: 6px solid var(--nd-navy-2); background: #F4F8FB; }
+    .example h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+    .example p { margin-bottom: .5rem; font-size: 1.05rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .mini-card { padding: 1rem 1.1rem; border: 1px solid #C6D2DE; background: #fff; }
+    .cohort-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0 1.5rem; font-family: Arial, sans-serif; font-size: .95rem; }
+    .cohort-table th { padding: .75rem; text-align: left; color: #fff; background: var(--nd-navy); }
+    .cohort-table td { padding: .75rem; vertical-align: top; border: 1px solid #C6D2DE; }
+    .cohort-table tbody tr:nth-child(even) { background: var(--nd-blue-tint); }
+    .sociology-timeline { position: relative; margin: 1.6rem 0 1.6rem 6.5rem; padding: 0 0 0 2rem; list-style: none; border-left: 4px solid var(--nd-navy); }
+    .sociology-timeline li { position: relative; margin: 0 0 1.2rem; padding: 1rem 1.1rem; border: 1px solid #C6D2DE; background: #fff; box-shadow: 0 5px 14px rgba(0, 34, 68, .08); }
+    .sociology-timeline li:last-child { margin-bottom: 0; }
+    .sociology-timeline li::before { content: ''; position: absolute; top: 1.15rem; left: -2.72rem; width: 14px; height: 14px; border: 4px solid #fff; border-radius: 50%; background: var(--nd-red); box-shadow: 0 0 0 2px var(--nd-navy); }
+    .timeline-year { position: absolute; top: .95rem; right: calc(100% + 3rem); width: 5.6rem; color: var(--nd-navy); font: 850 .9rem/1.2 Arial, sans-serif; text-align: right; }
+    .timeline-region { display: inline-block; margin-bottom: .35rem; color: var(--nd-red); font: 850 .72rem/1.2 Arial, sans-serif; letter-spacing: .11em; text-transform: uppercase; }
+    .sociology-timeline h3 { margin: 0 0 .35rem; font-size: 1.2rem; }
+    .sociology-timeline p { margin: 0; font-size: 1rem; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .mini-card h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+    .mini-card p { margin: 0; font-size: 1rem; }
+    .review-box { margin-top: 2rem; padding: 1.4rem 1.5rem; color: #fff; background: var(--nd-navy); }
+    .review-box h2, .review-box h3 { margin-top: 0; color: #fff; border: 0; }
+    .review-box li { margin: .45rem 0; font-size: 1.05rem; }
+    .footer { padding: 2rem 0; color: #EAF2F8; background: var(--nd-navy); font-family: Arial, sans-serif; font-size: .85rem; }
+    @media (max-width: 850px) { .reading-grid { grid-template-columns: 1fr; } .concept-note { position: static; grid-row: 1; } }
+    @media (max-width: 600px) { .header-inner { align-items: flex-start; flex-direction: column; } .two-col { grid-template-columns: 1fr; } .sociology-timeline { margin-left: .55rem; padding-left: 1.5rem; } .sociology-timeline li::before { left: -2.15rem; } .timeline-year { position: static; display: block; width: auto; margin-bottom: .3rem; text-align: left; } main { padding-top: 2rem; } }
+    @media print { .site-header { color: #000; background: #fff; border-bottom: 2px solid #000; } .brand, .chapter-nav a { color: #000; } .hero { padding: 2rem 0; color: #000; background: #fff; border-bottom: 2px solid #000; } h1, .dek { color: #000; } .concept-note { position: static; } .scholar-box, .definition, .example { break-inside: avoid; box-shadow: none; } .footer { color: #000; background: #fff; border-top: 1px solid #000; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">SOC 2010 &middot; Introduction to Sociology</a>
+      <nav class="chapter-nav" aria-label="Chapter navigation"><a href="../decks/w1-sociological-imagination.html">Lecture slides</a><a href="../index.html">Course home</a></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="page-shell">
+      <span class="eyebrow">Textbook &middot; Chapter 1</span>
+      <h1>Sociological Imagination</h1>
+      <p class="dek">How biography, history, and social context shape the lives we experience as personal&mdash;and why sociology begins by looking beyond the individual.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="page-shell reading-grid">
+      <article>
+        <p class="chapter-kicker">Opening question</p>
+        <p class="lead">What can the price, location, and history of a house tell us about the people who live there? More than we might expect. A house is a physical structure, but it is also an address inside a network of schools, jobs, transportation, public services, relationships, expectations, and unequal opportunities.</p>
+        <p>Imagine two homes with similar bedrooms, bathrooms, and square footage. One is near a strong school district, stable employment, public transportation, and expanding services. The other is farther from those resources, in a neighborhood shaped by disinvestment or limited opportunity. The homes may look similar in a listing, yet their market values—and the lives organized around them—can be very different. The difference is not simply the building. It is where the building is located.</p>
+
+        <p>This is the lesson of “location, location, location.” A house is not valued solely by what it is; its location connects it to resources, risks, relationships, and opportunities beyond its walls. Sociology extends that insight to human life. To understand people, we must ask not only who they are or what choices they make, but also <strong>where they are socially located</strong>: in a family, neighborhood, school, workplace, class position, racialized system, gender order, historical period, and stage of the life course. Social location does not determine a person’s life mechanically, but it shapes the possibilities and constraints within which biography unfolds.</p>
+
+        <div class="definition"><strong>Core idea</strong><p>Sociology studies the reciprocal relationship between human action and social order. It examines how social relationships, institutions, historical conditions, and cultural meanings organize human life, and how people, through individual and collective action and interaction, create, reproduce, challenge, and transform those arrangements. Sociology connects individual experiences to larger patterns while also asking how those patterns emerge and change.</p></div>
+
+        <h2 id="opening-question">1. From a personal experience to a sociological question</h2>
+        <p>Everyday life presents us with experiences that feel immediate and personal: finding a job, paying rent, choosing a school, caring for a family member, feeling lonely, or deciding whether to continue an education. Personal experience matters. Sociology does not dismiss what people feel or do. Instead, it asks what else must be known in order to understand that experience fully.</p>
+        <p>A sociological question places the individual inside a wider setting. If one person cannot find work, we might ask about training, transportation, health, discrimination, or the person&rsquo;s decisions. If unemployment rises across an entire region, we also ask about factory closures, economic policy, technology, trade, or the organization of labor. The individual story remains important, but it becomes one part of a larger explanation.</p>
+        <aside class="example"><h3>Example: from house location to social location</h3><p>The market value of a home is not determined only by its walls and rooms. Location connects a household to schools, employers, tax bases, environmental risks, social networks, and public investment. The same principle helps us study people: social location links private biography to public arrangements.</p></aside>
+
+        <h2 id="society">2. What is society?</h2>
+        <p>The word <em>society</em> refers to more than a collection of individuals. A society is an organized pattern of relationships, institutions, practices, meanings, and shared history that emerges from people&rsquo;s repeated interactions and coordinated actions. Families, schools, workplaces, governments, markets, religious organizations, media systems, neighborhoods, and informal networks exist because people create roles, follow or challenge expectations, cooperate, compete, and respond to one another. Society is therefore made through human action rather than existing independently of it.</p>
+        <p>Once these patterns become established, however, they confront individuals as social arrangements that already exist. People are born into languages, laws, inequalities, organizations, and cultural expectations they did not personally choose. These arrangements make some actions possible, make others difficult, distribute resources and opportunities unevenly, and shape how people understand their choices. Everyday actions can reproduce this social order, but collective action, conflict, innovation, and changing interpretations can also transform it. Society thus both emerges from human action and enables or constrains the actions that follow.</p>
+        <div class="definition"><strong>Concept: social context</strong><p>The surrounding relationships, institutions, cultural meanings, historical circumstances, and material conditions that give an individual experience its shape and significance.</p></div>
+
+        <div class="scholar-box">
+          <h3>Auguste Comte: naming a new science of society</h3>
+          <p>Auguste Comte (1798&ndash;1857), a French thinker, helped establish the word <em>sociology</em> in the nineteenth century. He argued that social life could be studied systematically rather than treated only as a matter of philosophical speculation or moral opinion. Comte lived during a period of political upheaval and rapid economic change after the French Revolution, when industrialization and urban growth were unsettling older forms of authority and community.</p>
+          <p>Comte held a highly optimistic vision of the new discipline. He believed that scientific knowledge of society could restore order and guide moral progress, eventually replacing religion as society&rsquo;s main source of unity. In his proposed secular &ldquo;Religion of Humanity,&rdquo; sociologists would replace traditional priests as moral guides and serve as a new positivist priesthood. This ambition proved unrealistic. Scientific evidence can clarify social conditions and likely consequences, but it cannot by itself resolve conflicts over values, determine a single moral order, or justify placing sociologists above democratic debate. Later sociologists rejected much of Comte&rsquo;s grand program, while retaining his influential claim that society can be studied systematically and empirically.</p>
+        </div>
+
+        <h2 id="origins">3. Why sociology emerged in the nineteenth century</h2>
+        <p>Sociology developed as a formal discipline during a period when familiar social arrangements were changing quickly. <strong>Industrialization</strong> moved production from households and small workshops into factories. Work became increasingly organized around wages, machines, schedules, and large-scale production. <strong>Urbanization</strong> brought growing numbers of people into cities, where strangers lived near one another and social problems became highly visible.</p>
+        <p>These changes altered family life, work, neighborhoods, politics, and ideas about progress. In a pre-industrial pattern, a farm or cottage might combine residence and work, and a large family might contribute labor to the household economy. In a post-industrial pattern, factories, cities, smaller households, and a separation between paid employment and domestic life became more common. These are broad patterns rather than universal rules, but they show why sociologists compare social arrangements across time.</p>
+        <p>The development of science also mattered. As scientific methods gained authority in the nineteenth century, scholars increasingly asked whether observation, comparison, evidence, and systematic explanation could be applied to social life. Sociology emerged from this intersection of social transformation and confidence in scientific inquiry.</p>
+
+        <h3>From European foundations to American institutions</h3>
+        <p>Sociology&rsquo;s institutional history did not follow a single straight line. European theories and university programs influenced American departments, but American sociology also grew through settlement houses, historically Black institutions, investigative journalism, reform movements, and research by scholars who were often excluded from full recognition in predominantly white and male universities. The timeline traces these intersecting lineages.</p>
+        <ol class="sociology-timeline" aria-label="Timeline of sociology's development from Europe to the United States">
+          <li>
+            <span class="timeline-year">1887&ndash;1895</span>
+            <span class="timeline-region">Europe &middot; Bordeaux</span>
+            <h3>Durkheim helps institutionalize sociology</h3>
+            <p>&Eacute;mile Durkheim began teaching social science and pedagogy at the University of Bordeaux in 1887, bringing sociology into the French university system. By 1895, his teaching program and <em>The Rules of Sociological Method</em> had helped establish sociology as a distinct academic field; his work at Bordeaux is commonly associated with Europe&rsquo;s first university program or department in sociology.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1889&ndash;1895</span>
+            <span class="timeline-region">United States &middot; Chicago</span>
+            <h3>Women build a civic and empirical sociology</h3>
+            <p>Jane Addams and Ellen Gates Starr opened Hull-House in 1889. Addams, Florence Kelley, Julia Lathrop, and other residents combined neighborhood relationships, observation, surveys, maps, and reform. Their <em>Hull-House Maps and Papers</em> (1895) documented wages, nationalities, labor, and living conditions, demonstrating that sociological research could be created with communities and used to challenge inequality.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1892</span>
+            <span class="timeline-region">United States &middot; Departments and excluded voices</span>
+            <h3>American sociology develops along parallel paths</h3>
+            <p>The University of Chicago established the first sociology department in the United States under Albion Small. In the same year, Anna Julia Cooper&rsquo;s <em>A Voice from the South</em> analyzed the linked positions of Black women, while Ida B. Wells&rsquo;s <em>Southern Horrors</em> used evidence to expose the social organization and false justifications of lynching. Sociology was being formed both inside universities and by Black and female intellectuals working beyond their boundaries.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1895&ndash;1898</span>
+            <span class="timeline-region">Transatlantic exchange</span>
+            <h3>Journals and new theories create a field</h3>
+            <p>Albion Small founded the <em>American Journal of Sociology</em> in 1895, with Durkheim among its international advisers. Durkheim organized <em>L&rsquo;Ann&eacute;e sociologique</em>, whose first volume appeared in 1898. That same year, Charlotte Perkins Gilman&rsquo;s <em>Women and Economics</em> examined how economic dependence and domestic arrangements shaped gender inequality. Publications carried sociological ideas across institutions and national borders.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1897&ndash;1899</span>
+            <span class="timeline-region">United States &middot; Atlanta and Philadelphia</span>
+            <h3>Du Bois establishes an empirical sociology of race</h3>
+            <p>W. E. B. Du Bois joined Atlanta University in 1897 and helped direct a sustained program of research on Black communities. In <em>The Philadelphia Negro</em> (1899), Du Bois, with research assistance from Isabel Eaton, used surveys, interviews, mapping, and historical evidence to explain how discrimination and neighborhood conditions shaped social life. His work challenged biological racism and established a major empirical tradition that the white academic mainstream long marginalized.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1905</span>
+            <span class="timeline-region">United States &middot; National organization</span>
+            <h3>The American Sociological Society is founded</h3>
+            <p>Sociologists meeting in Baltimore created the American Sociological Society, giving the expanding discipline a national professional organization. The organization later adopted the name American Sociological Association in 1959. Its creation signaled sociology&rsquo;s growing academic legitimacy, although access to recognition and leadership remained unequal.</p>
+          </li>
+          <li>
+            <span class="timeline-year">1936</span>
+            <span class="timeline-region">United States &middot; Professional consolidation</span>
+            <h3><em>American Sociological Review</em> begins publication</h3>
+            <p>The national association launched <em>American Sociological Review</em> as a journal for research of broad disciplinary importance. Its founding marked the consolidation of an American professional infrastructure built from European intellectual influences, university departments, empirical community studies, and lines of scholarship developed by people whom the formal institutions often excluded.</p>
+          </li>
+        </ol>
+        <p class="source-note"><strong>Timeline sources:</strong> the <a href="https://sociologie.u-bordeaux.fr/Presentation/Histoire-de-la-Faculte">University of Bordeaux</a>, the <a href="https://mag.uchicago.edu/law-policy-society/evolution-division">University of Chicago</a>, the Library of Congress collections on <a href="https://www.loc.gov/exhibitions/join-in-voluntary-associations-in-america/about-this-exhibition/a-nation-of-joiners/changing-america/settlement-houses-hull-house/">Hull-House</a>, <a href="https://www.loc.gov/exhibitions/women-fight-for-the-vote/about-this-exhibition/more-to-the-movement/anna-julia-cooper/">Anna Julia Cooper</a>, <a href="https://blogs.loc.gov/headlinesandheroes/2020/02/ida-b-wells-and-the-activism-of-investigative-journalism/">Ida B. Wells</a>, and <a href="https://www.loc.gov/item/05033530/">The Philadelphia Negro</a>, the Smithsonian&rsquo;s documentation of the <a href="https://www.si.edu/object/atlanta-university-publications-nos-1-2-4-8-9-11-13-14-15-16-17-18%3Asiris_sil_183">Atlanta University studies</a>, and the <a href="https://www.asanet.org/wp-content/uploads/fn_2005_03.pdf">American Sociological Association&rsquo;s institutional history</a>.</p>
+
+        <div class="scholar-box">
+          <h3>Early sociologists and competing explanations</h3>
+          <p><strong>Karl Marx</strong> analyzed capitalism, class conflict, labor, and the relationship between economic organization and social power. <strong>&Eacute;mile Durkheim</strong> studied social integration, institutions, and the forces that hold societies together. <strong>Max Weber</strong> examined meaning, authority, bureaucracy, religion, and the ways people interpret their actions. Other early scholars&mdash;including Herbert Spencer, Georg Simmel, W. E. B. Du Bois, and Jane Addams&mdash;contributed important analyses of social organization, urban life, race, reform, and inequality.</p>
+          <p>These thinkers did not agree about what society is or how it changes. That disagreement is productive. Sociology is not one single theory; it is a field of questions and methods for explaining patterned social life.</p>
+        </div>
+
+        <h2 id="imagination">4. The sociological imagination</h2>
+        <p>The phrase <strong>sociological imagination</strong> was developed by the American sociologist C. Wright Mills. It names the capacity to connect personal experience with larger social conditions. A person using sociological imagination asks how biography&mdash;the events and circumstances of an individual life&mdash;intersects with history&mdash;the broader stream of events, institutions, and transformations through which that life unfolds.</p>
+        <div class="definition"><strong>Concept: sociological imagination</strong><p>The ability to see the relationship between personal troubles and public issues, and to understand biography in connection with history and social structure.</p></div>
+        <p>This is more than &ldquo;thinking socially.&rdquo; It is a disciplined shift in perspective. We move back and forth between a person&rsquo;s immediate experience and the structures that organize the experience. We ask what is distinctive about one case, what is patterned across many cases, and how historical conditions make some outcomes more likely than others.</p>
+
+        <div class="scholar-box">
+          <h3>C. Wright Mills: biography, history, and public issues</h3>
+          <p>C. Wright Mills (1916&ndash;1962) was an American sociologist whose work challenged narrow, overly technical approaches to social research. He wrote in a period marked by the Great Depression&rsquo;s legacy, World War II, the expansion of mass organizations, the Cold War, and the growth of professional and bureaucratic power in the United States.</p>
+          <p>In <em>The Sociological Imagination</em> (1959), Mills argued that sociology should help people understand the relationship between their lives and the historical forces around them. He distinguished between <strong>personal troubles</strong>, which occur within an individual&rsquo;s immediate relationships and biography, and <strong>public issues</strong>, which reflect arrangements in institutions and affect many people. Mills also criticized the separation of &ldquo;grand theory&rdquo; from concrete evidence: explanation should be historically informed, empirically grounded, and relevant to public life.</p>
+          <p>Mills&rsquo;s other major works examined the concentration of power among political, corporate, and military leaders; the organization of white-collar work; and the effects of bureaucratic institutions on ordinary people. He was strongly influenced by Marxism, especially Marx&rsquo;s analyses of capitalism, class, alienation, and historical change, although he combined these ideas with Weber&rsquo;s analysis of bureaucracy and authority, American pragmatism, and elite theory rather than adopting an orthodox or economically deterministic Marxism. In his &ldquo;Letter to the New Left&rdquo; (1960), Mills directly encouraged an emerging generation of radical students and intellectuals to become agents of democratic change. His criticism of Cold War power, bureaucratic conformity, and complacent academic sociology made his work an important resource for the developing New Left. Mills was therefore an important forerunner and intellectual bridge to the radical and neo-Marxist turn in American sociology during the late 1960s and 1970s. His central contribution was not a formula for blaming society instead of individuals, but a method for asking better questions about how individual agency and social structure meet.</p>
+        </div>
+
+        <h2 id="troubles">5. Personal troubles and public issues</h2>
+        <p>Mills&rsquo;s distinction becomes clearest when we compare one person&rsquo;s situation with a widespread pattern. If one person is unemployed, the immediate problem may involve a personal trouble: a r&eacute;sum&eacute;, a missed opportunity, a health condition, or a strained relationship. But if millions of people cannot find work during a recession, or if an entire industry closes in a region, the problem is also a public issue. It is connected to institutions, markets, policy decisions, and historical change.</p>
+        <div class="two-col">
+          <div class="mini-card"><h3>Personal trouble</h3><p>A difficulty experienced in the context of an individual&rsquo;s immediate relationships and biography.</p></div>
+          <div class="mini-card"><h3>Public issue</h3><p>A problem rooted in social arrangements and experienced across a significant portion of a population.</p></div>
+        </div>
+        <p>The distinction is not absolute. A personal trouble can be intensified by a public issue, and a public issue is always experienced through individual lives. The analytical task is to determine how the two levels connect.</p>
+        <aside class="example"><h3>Example: education and timing</h3><p>A student who leaves school may describe the decision as personal. Sociological analysis also asks about tuition, family income, school quality, transportation, labor-market expectations, public policy, and the historical period in which the student came of age. The goal is not to erase responsibility; it is to identify the conditions within which responsibility is exercised.</p></aside>
+
+        <h2 id="history">6. History and biography</h2>
+        <p>History is not merely a list of dates that happened before the present. It is the changing context in which people form identities, make decisions, and encounter opportunities or barriers. A war, depression, migration wave, technological change, or policy reform can affect people differently depending on their age, family position, race, class, gender, location, and institutions available to them.</p>
+        <p>Biography is not merely a private story detached from history. The life course has timing. Being a child during an economic crisis is different from entering the labor market during that crisis. Graduating from high school before or after a war, a recession, or a major policy change can alter the choices available at the next stage of life.</p>
+
+        <h2 id="cohorts">7. A cohort study: the Great Depression and different life courses</h2>
+        <div class="scholar-box">
+          <h3>Glen H. Elder, Jr. and the life-course perspective</h3>
+          <p>Glen H. Elder, Jr. is a sociologist and a leading figure in the development of life-course theory and research. His best-known study, <em>Children of the Great Depression: Social Change in Life Experience</em>, first published in 1974 and expanded in a 1999 anniversary edition, followed 167 people born in Oakland, California, in 1920&ndash;1921 from childhood into the adult years. By using longitudinal evidence&mdash;information collected about the same people repeatedly over time&mdash;Elder could observe two processes unfolding together: individuals were growing older and changing, while the economy, families, institutions, public policies, and national history around them were also changing.</p>
+          <p>Imagine a person traveling through two connected tunnels at once. The long hallway is historical time: everyone moves through the Great Depression, World War II, and the postwar period in the same calendar order. Within that hallway, the moving walkway is age: childhood, adolescence, and adulthood carry people forward through changing capacities, dependencies, roles, and institutions. Birth cohorts enter this dual passage at different points. Consequently, members of different cohorts encounter the same historical events at different ages, when they are differently prepared to act and differently vulnerable to disruption.</p>
+          <p>Elder&rsquo;s life-course perspective asks us to study lives within this interaction of <strong>historical time and place</strong>, <strong>timing</strong>, <strong>linked lives</strong>, and <strong>human agency</strong>. Age is not merely a biological number; it helps determine what an event can mean, how strongly it enters family and individual life, and which responses and opportunities are possible. This perspective also changes how we understand resilience. Resilience is not simply a fixed personal trait. It can develop when the timing of later relationships, institutions, and public policies opens pathways that redirect a life. Elder&rsquo;s research therefore joins biography to history by examining how people change within changing social conditions.</p>
+        </div>
+        <p>Elder&rsquo;s study illustrates the dual movement of age and history through a comparison of two California cohorts. The Oakland cohort was born around 1920&ndash;1921; the Berkeley cohort was born around 1928&ndash;1929. Both moved through the same sequence of historical events&mdash;the relative prosperity of the 1920s, the Great Depression, World War II, and the postwar transition&mdash;but they reached each event at different ages. The Oakland children spent early childhood in the 1920s and encountered the Depression as older children and adolescents. They then reached young adulthood during wartime mobilization, when military service, work, marriage, and later veterans&rsquo; benefits could become important turning points. The Berkeley children encountered the Depression in early childhood, reached adolescence during World War II, and entered young adulthood during the postwar period. Their cohort position therefore created a different schedule of exposure, dependency, opportunity, and transition.</p>
+        <p>The distinction is not that one cohort suffered while the other escaped hardship. Both were shaped by the same changing history, but age altered how that history entered their lives. Younger children depended more completely on family resources and were especially vulnerable when economic loss disrupted parents and households. Older children and adolescents could understand the crisis differently, contribute labor, leave school, or assume new family responsibilities. During World War II, the Oakland cohort was old enough for military and adult work roles, while the Berkeley cohort was still moving through school and adolescence. The same event could therefore create vulnerability at one life stage and, through different institutions encountered later, the possibility of resilience at another.</p>
+
+        <table class="cohort-table">
+          <caption class="visually-hidden">How historical timing differed for the Oakland and Berkeley cohorts</caption>
+          <thead><tr><th scope="col">Oakland cohort (1920&ndash;1921)</th><th scope="col">Berkeley cohort (1928&ndash;1929)</th></tr></thead>
+          <tbody>
+            <tr><td>Early childhood during the relatively secure 1920s, before severe economic disruption entered family life</td><td>Early childhood during the Great Depression, when dependence on family resources heightened vulnerability to household hardship</td></tr>
+            <tr><td>Older childhood and adolescence during the Depression, when school, work, and family responsibilities were already changing</td><td>Adolescence during World War II, when wartime change was experienced largely through family, school, and community life</td></tr>
+            <tr><td>Young adulthood during wartime mobilization, military service, marriage, and the opening of postwar educational pathways</td><td>Young adulthood during the postwar transition, with a later schedule of educational, occupational, and family opportunities</td></tr>
+          </tbody>
+        </table>
+
+        <p>Unexpectedly, many Oakland participants followed a trajectory of resilience into the middle years of life. Their earlier disadvantages did not disappear, but the timing of their passage into young adulthood placed them at the intersection of wartime mobilization and expanding postwar institutions. Three kinds of opportunity were especially important: higher education, marriage as a source of support during young adulthood, and military service. These experiences reinforced one another rather than operating as isolated benefits. Military service could provide training, income, new social networks, and contact with potential spouses. It could also connect veterans to the educational and housing opportunities created by the 1944 GI Bill of Rights. In Elder&rsquo;s evidence, nearly half of the California veterans reported completing an educational degree through GI Bill benefits.</p>
+        <p>The effects were especially consequential for people whose earlier social locations had limited their options. Because members of the Oakland cohort reached military age when wartime service and postwar programs were available, some veterans who had entered the service young or had a history of delinquency gained access to training, credentials, and relationships that altered their later occupational possibilities. These later experiences were associated with higher job status, greater job stability, and improved economic well-being into the middle years, independent of some childhood differences and socioeconomic origins. Their resilience was therefore neither purely individual nor guaranteed by cohort membership. It emerged from the interaction between personal action, age at exposure, linked relationships, and institutions available at a particular historical moment.</p>
+        <p>This does not mean that war itself was beneficial, or that every veteran experienced the same outcome. It means that historically specific institutions can rearrange the opportunity structure. Elder&rsquo;s broader lesson is that societies should not need a war to create pathways to education, training, mobility, and adult stability. A sociologist therefore asks not only how individuals cope, but also which public arrangements make coping more or less possible.</p>
+        <div class="definition"><strong>Concept: cohort</strong><p>A group of people who experience a significant event or historical period at roughly the same stage of life and whose shared timing may shape their later experiences.</p></div>
+        <p>The comparison demonstrates why age, history, and biography must be considered together. &ldquo;The Great Depression affected children&rdquo; is true but incomplete. A sociological explanation asks: Which children? At what age? In which families and neighborhoods? With what resources? Which institutions did they encounter next? What opportunities were opened or closed by their location in history?</p>
+
+        <h3>Another classic example: &Eacute;mile Durkheim&rsquo;s <em>Suicide</em></h3>
+        <p>Glen Elder shows how historical events affect people differently depending on when those events enter the life course. More than a century earlier, &Eacute;mile Durkheim used a different kind of evidence to make a related sociological argument. In <em>Suicide</em> (1897), Durkheim examined patterns in suicide rates across social groups and argued that suicide could not be understood only as an individual psychological act. The act is personal, but its distribution across groups can reveal the organization of social life.</p>
+        <div class="scholar-box">
+          <h3>&Eacute;mile Durkheim: social integration and regulation</h3>
+          <p>Durkheim was one of the founders of sociology as an empirical discipline. His study of suicide asked why rates varied across religious communities, families, and periods of social change. He treated the suicide rate as a <strong>social fact</strong>: a patterned feature of social life that exists beyond any single individual and can be studied through evidence.</p>
+          <p>Two ideas organize Durkheim&rsquo;s explanation. <strong>Social integration</strong> refers to the strength of a person&rsquo;s connections to groups and communities. <strong>Social regulation</strong> refers to the norms and limits that organize desires and expectations. Durkheim proposed four ideal types: egoistic suicide, associated with insufficient integration; altruistic suicide, associated with excessive integration; anomic suicide, associated with insufficient regulation during periods of disruption or rapid change; and fatalistic suicide, associated with excessive regulation.</p>
+          <p>These categories should be read as analytical tools, not as labels for individual people. Durkheim&rsquo;s larger contribution was to shift the question from “What is wrong with this person?” to “What patterns in social relationships, institutions, and norms help explain differences across groups?” That shift is an early example of sociological imagination.</p>
+        </div>
+        <p>Durkheim&rsquo;s study illustrates social location in a different way from Elder&rsquo;s cohort comparison. Elder asks where people are located in historical time and in the life course. Durkheim asks where people are located within networks of belonging and systems of regulation. A person&rsquo;s family ties, religious community, work situation, and experience of social change can shape the resources, meanings, and constraints surrounding a crisis. These conditions do not mechanically determine an outcome, but they can affect the likelihood that people experience isolation, obligation, direction, or disruption.</p>
+        <aside class="example"><h3>Using both examples together</h3><p>Elder&rsquo;s children of the Great Depression and Durkheim&rsquo;s study of suicide examine different questions, methods, and historical periods. Together they teach the same habit of mind: locate the individual experience in a larger pattern. Ask how age, cohort, family, community, institutions, norms, and historical change shape the possibilities people encounter.</p></aside>
+        <div class="definition"><strong>Concept: social integration</strong><p>The degree to which people are connected to social groups and participate in relationships that provide belonging, identity, support, and obligations.</p></div>
+
+        <h2 id="practice">8. Practicing sociological imagination</h2>
+        <p>The sociological imagination can be practiced as a sequence of questions. Begin with the concrete experience, then widen the lens.</p>
+        <ol>
+          <li><strong>Name the experience.</strong> What is happening, and how do people describe it?</li>
+          <li><strong>Locate the setting.</strong> Where does it occur, and what institutions or relationships surround it?</li>
+          <li><strong>Ask who is affected.</strong> Is this one person&rsquo;s situation, a patterned experience, or both?</li>
+          <li><strong>Compare groups and places.</strong> Do outcomes vary by class, race, gender, age, location, or historical period?</li>
+          <li><strong>Trace the history.</strong> What policies, economic changes, conflicts, technologies, or cultural expectations shaped the situation?</li>
+          <li><strong>Connect biography to structure.</strong> How do personal decisions and social conditions interact?</li>
+        </ol>
+        <p>A strong sociological explanation does not stop at &ldquo;society caused it.&rdquo; It identifies mechanisms: the rules, resources, institutions, meanings, and relationships through which social conditions influence lives.</p>
+
+        <p class="source-note"><strong>Further reading:</strong> Glen H. Elder, Jr., <em>Children of the Great Depression</em>; Elder and Rockwell, “The Life-Course and Human Development”; Elder and Caspi, “Human Development and Social Change”; and &Eacute;mile Durkheim, <em>Suicide</em>. These works extend the chapter&rsquo;s discussion of historical timing, linked lives, social integration, and resilience.</p>
+
+        <h2 id="values">9. Can sociology be value-neutral?</h2>
+        <p>Sociologists have long disagreed about how the discipline should relate to moral and political values. One orientation seeks to <strong>contain</strong> values so that sociology can produce credible explanations of social life. Another seeks to <strong>acknowledge and engage</strong> values, arguing that social inquiry always begins from concerns about what matters and can responsibly contribute to social change. The disagreement is not simply between people who care about society and people who do not. It concerns where values enter research, whether their influence can be controlled, and what responsibilities follow from sociological knowledge.</p>
+        <div class="definition"><strong>Concept: value neutrality</strong><p>The methodological ideal that sociologists should distinguish empirical claims about what is from moral judgments about what ought to be, examine evidence fairly, and prevent personal or political commitments from determining their findings.</p></div>
+        <p>Max Weber offered a more subtle position than the phrase <em>value-free sociology</em> sometimes suggests. Values help researchers select topics because no one can study everything; judgments about significance guide attention toward some questions rather than others. Weber called this <strong>value relevance</strong>. Once an investigation begins, however, researchers should not present their preferred values as if those preferences were scientific findings. Evidence can show how a policy operates, who is affected, and what consequences are likely, but evidence alone cannot decide which ultimate goals society ought to pursue.</p>
+
+        <div class="two-col">
+          <div class="mini-card"><h3>Containing values</h3><p>This orientation protects inquiry from wishful thinking, cherry-picked evidence, partisan pressure, and the temptation to treat moral agreement as proof. William Fielding Ogburn argued that sociology as a science is directly concerned with discovering new knowledge, even though individual sociologists may choose socially useful research problems.</p></div>
+          <div class="mini-card"><h3>Acknowledging and engaging values</h3><p>This orientation begins from the fact that researchers are socially situated. Values can influence the problems selected, categories used, data considered important, interpretations developed, and applications pursued. Lester Frank Ward argued that science becomes lifeless when it fails to benefit humanity.</p></div>
+        </div>
+
+        <h3>A long-standing divide in American sociology</h3>
+        <p>The tension between scientific detachment and reform did not appear recently. Early American sociology grew partly from abolitionism, the Social Gospel, labor reform, settlement houses, and efforts to understand the consequences of industrialization and urbanization. Jane Addams and the Hull-House researchers combined empirical investigation with social reform. W. E. B. Du Bois used surveys, interviews, maps, and historical analysis not only to produce knowledge but also to challenge racist explanations of inequality. Other sociologists sought disciplinary legitimacy by emphasizing measurement, statistical analysis, explanatory theory, and distance from political advocacy.</p>
+        <p>During the middle decades of the twentieth century, survey research, foundation support, government projects, and increasingly technical methods strengthened sociology&rsquo;s scientific identity. Research such as <em>An American Dilemma</em> and <em>The American Soldier</em> also showed that rigorous empirical work could address urgent public problems. The apparent settlement was therefore never a complete separation between science and values. It was an effort to use disciplined research on socially important questions while maintaining credibility across political disagreements.</p>
+
+        <h3>Why did American sociology become more value-laden and left-leaning?</h3>
+        <p>Jonathan H. Turner, Christian Smith, and Musa al-Gharbi offer overlapping explanations for why American sociology became more <strong>activist</strong>, <strong>morally explicit</strong>, and left-leaning. Turner emphasizes the long conflict between scientific and activist sociology; Smith analyzes an institutionalized moral vision that he calls the discipline&rsquo;s &ldquo;sacred project&rdquo;; and al-Gharbi locates the change within the growth and status competition of knowledge-economy professionals whom he calls &ldquo;symbolic capitalists.&rdquo; Taken together, their accounts identify several connected developments:</p>
+        <ul>
+          <li><strong>An inherited reform tradition.</strong> American sociology grew partly from abolitionism, the Social Gospel, settlement houses, labor reform, and efforts to address the disruptions of industrialization and urbanization. The discipline therefore attracted students, scholars, organizations, and publics concerned with social problems from its beginning. Its later activist orientation did not emerge from nowhere; it strengthened a reform impulse that had long coexisted, sometimes uneasily, with the aspiration to build an objective social science.</li>
+          <li><strong>Social movements after the 1960s.</strong> The civil rights, antiwar, feminist, labor, environmental, LGBTQ+, and other movements challenged consensus theories and placed inequality, power, discrimination, and social justice at the center of sociological attention. These movements changed the questions scholars asked and encouraged closer relationships between research and political action. Mills&rsquo;s critical sociology helped prepare this shift, while the subsequent radical and neo-Marxist turn gave conflict-oriented explanations greater influence within American sociology.</li>
+          <li><strong>A changing profession.</strong> As universities became more accessible, women, racial and ethnic minorities, LGBTQ+ scholars, and members of other previously excluded groups entered sociology in greater numbers. Their experiences raised questions that established departments had often overlooked and expanded research on race, gender, sexuality, identity, and intersecting inequalities. This greater inclusion broadened the discipline&rsquo;s knowledge while also increasing support for scholarship that connected the study of inequality with demands for recognition, reform, and social justice.</li>
+          <li><strong>Public and critical sociology.</strong> Sociologists increasingly questioned whether producing academic knowledge was enough. Michael Burawoy&rsquo;s model of professional, policy, critical, and public sociology called on scholars to examine their discipline&rsquo;s assumptions, engage organized publics, and support collective action and social-movement mobilization. His election as president of the American Sociological Association in 2004, followed by an annual meeting centered on public sociology, signaled that this activist orientation had moved from the profession&rsquo;s margins toward its institutional center and was becoming dominant within the ASA.</li>
+          <li><strong>An institutionalized &ldquo;sacred project.&rdquo;</strong> A moral vision centered on emancipation, equality, personal autonomy, and opposition to oppression, exclusion, and domination became embedded in the discipline. It shaped graduate training, hiring, professional rewards, research agendas, and judgments about which questions and explanations appeared important or legitimate. These commitments increasingly operated as an institutional culture rather than merely as the preferences of individual scholars, making it easier to present a contested moral project as if it followed directly from social science itself.</li>
+          <li><strong>The rise of symbolic capitalists.</strong> As social-justice language became influential and trendy, fluency in that language began to function as cultural capital: it could communicate moral commitments while also bringing professional benefits, prestige, and status. Identifying with marginalized groups, mastering specialized concepts, and challenging insufficiently progressive peers could help scholars claim authority and distinguish themselves. Their commitments need not be insincere; moral conviction and professional incentives can become blended and consequently reinforce one another within academic life.</li>
+        </ul>
+        <p>Turner regards these developments as evidence that a justice-oriented moral project is displacing scientific sociology. He warns that advocacy can encourage ideological conformity, discourage inconvenient findings, alienate politically diverse audiences, and weaken sociology&rsquo;s ability to solve problems for a wide range of publics and organizations. Sociologist Stephen Cole offers a parallel diagnosis.</p>
+
+        <div class="scholar-box">
+          <h3>Stephen Cole on sociology&rsquo;s disciplinary paradigm</h3>
+          <p>Cole writes:</p>
+          <blockquote>
+            <p>&ldquo;In sociology the disciplinary paradigm is closer to an ideology than to a set of commonly held theories, methods, and exemplars. The disciplinary paradigm in sociology is a type of victimology in which poor people are seen as the victims of capitalism and the capitalist class, women are seen as the victims of men, Afro-Americans and other ethnic minorities are seen as the victims of whites, and homosexuals are seen as the victims of homophobes. Evidence which does not support the dominant victimology is ignored or rejected; statements which support the dominant victimology are accepted without the benefit of empirical support.</p>
+            <p>&hellip;</p>
+            <p>The disciplinary paradigm in sociology also includes a preference for structural explanations as opposed to cultural explanations. Structural explanations concern how the society is organized and acts to influence the fate of individuals. &hellip; Cultural explanations concern anything which is in the individual&rsquo;s head. Attitudes, values, goals, norms, all of these would be part of culture&hellip; Cultural explanations are usually seen as a form of blaming the victim argument and therefore are politically incorrect.&rdquo;</p>
+          </blockquote>
+        </div>
+
+        <h3>Value-conscious objectivity</h3>
+        <p>A productive middle position is to treat objectivity as a disciplined practice rather than the absence of all values. Sociologists can pursue questions they consider morally important and still protect inquiry from becoming predetermined advocacy. Doing so requires them to:</p>
+        <ol>
+          <li><strong>State the question and relevant commitments clearly.</strong> Readers should be able to distinguish the researcher&rsquo;s motivation from the empirical claim being tested.</li>
+          <li><strong>Separate evidence from evaluation.</strong> Explain what the evidence supports before arguing what people or governments should do.</li>
+          <li><strong>Use transparent and appropriate methods.</strong> Define categories, document decisions, disclose limitations, and make it possible for others to evaluate the analysis.</li>
+          <li><strong>Seek disconfirming evidence and rival explanations.</strong> A conclusion is more credible when it survives serious attempts to show that it is wrong.</li>
+          <li><strong>Remain answerable to criticism from multiple perspectives.</strong> Inclusion should broaden the questions and evidence considered without making political agreement a condition of participation.</li>
+        </ol>
+        <p>This approach does not eliminate the tension between scientific and activist sociology. It makes the tension visible and manageable. Sociology can investigate inequality, suffering, institutions, solidarity, organizational problems, or any other subject while maintaining the same obligation: conclusions must be earned through evidence and reasoning rather than guaranteed by the moral attractiveness of the cause.</p>
+        <p class="source-note"><strong>Further reading on the debate:</strong> Max Weber, &ldquo;The Meaning of Ethical Neutrality in Sociology and Economics&rdquo;; William F. Ogburn, &ldquo;Folkways of a Scientific Sociology&rdquo;; Lester F. Ward, <em>Dynamic Sociology</em>; Stephen Cole, ed., <a href="https://www.routledge.com/Whats-Wrong-with-Sociology/Cole/p/book/9781138517882"><em>What&rsquo;s Wrong with Sociology?</em></a>; Christian Smith, <a href="https://academic.oup.com/book/8228"><em>The Sacred Project of American Sociology</em></a>; Musa al-Gharbi, <a href="https://musaalgharbi.com/paperback-edition-we-have-never-been-woke/"><em>We Have Never Been Woke</em></a>; Michael Burawoy, <a href="https://www.asanet.org/wp-content/uploads/sage_burawoy_presidential_address.pdf">&ldquo;For Public Sociology&rdquo;</a>; and Jonathan H. Turner, <a href="https://doi.org/10.1007/s12108-019-09420-5">&ldquo;The More American Sociology Seeks to Become a Politically-Relevant Discipline, the More Irrelevant It Becomes to Solving Societal Problems&rdquo;</a>. Turner&rsquo;s article provides a forceful scientific-sociology critique; it should be read as a position within the controversy and compared with arguments for public, critical, feminist, and anti-racist sociology.</p>
+
+        <section class="review-box" aria-labelledby="chapter-review">
+          <h2 id="chapter-review">Chapter review</h2>
+          <h3>Essential ideas</h3>
+          <ul>
+            <li>Social context connects individuals to institutions, relationships, history, and material conditions.</li>
+            <li>Sociology explains patterned social life rather than treating every outcome as purely individual.</li>
+            <li>Industrialization, urbanization, social change, and scientific inquiry helped establish sociology as a discipline.</li>
+            <li>The value-neutrality debate asks how sociologists can acknowledge moral commitments while preventing those commitments from predetermining empirical conclusions.</li>
+            <li>C. Wright Mills connected personal troubles to public issues and biography to history.</li>
+            <li>Cohort and life-course analysis show why the same historical event can affect groups differently depending on timing.</li>
+            <li>Durkheim&rsquo;s <em>Suicide</em> shows how social integration and regulation can help explain patterned differences in individual outcomes.</li>
+          </ul>
+          <h3>Questions for study</h3>
+          <ol>
+            <li>How does the location of a house illustrate the idea of social context?</li>
+            <li>What is the difference between a personal trouble and a public issue?</li>
+            <li>Why did sociology emerge during the nineteenth century?</li>
+            <li>What are the strongest arguments for value-neutral and value-laden sociology, and how does value-conscious objectivity respond to both?</li>
+            <li>How does Durkheim&rsquo;s study of suicide illustrate the importance of social location?</li>
+            <li>How did Mills define the sociological imagination?</li>
+            <li>Why did the Great Depression affect the Oakland and Berkeley cohorts differently?</li>
+          </ol>
+        </section>
+      </article>
+
+      <aside>
+        <section class="chapter-map" aria-labelledby="map-title">
+          <h2 id="map-title">Chapter map</h2>
+          <ol>
+            <li><a href="#opening-question">From experience to question</a></li>
+            <li><a href="#society">Society and context</a></li>
+            <li><a href="#origins">Origins of sociology</a></li>
+            <li><a href="#imagination">Sociological imagination</a></li>
+            <li><a href="#troubles">Troubles and issues</a></li>
+            <li><a href="#history">History and biography</a></li>
+            <li><a href="#cohorts">Cohorts and life course</a></li>
+            <li><a href="#practice">Practice</a></li>
+            <li><a href="#values">Values and objectivity</a></li>
+          </ol>
+        </section>
+        <section class="concept-note" aria-labelledby="concept-title">
+          <h2 id="concept-title">Key concepts</h2>
+          <dl>
+            <dt>Society</dt><dd>An organized pattern of relationships, institutions, meanings, and history.</dd>
+            <dt>Social context</dt><dd>The surrounding conditions that shape an experience.</dd>
+            <dt>Value neutrality</dt><dd>Separating empirical analysis from judgments about what ought to be.</dd>
+            <dt>Sociological imagination</dt><dd>Connecting biography and history.</dd>
+            <dt>Personal trouble</dt><dd>A difficulty located in immediate biography and relationships.</dd>
+            <dt>Public issue</dt><dd>A problem rooted in social arrangements.</dd>
+            <dt>Cohort</dt><dd>People who encounter a historical event at a similar life stage.</dd>
+          </dl>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><div class="page-shell">SOC 2010 &middot; Introduction to Sociology &middot; Chapter 1</div></footer>
+</body>
+</html>
+

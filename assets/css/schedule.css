@@ -1,0 +1,98 @@
+.schedule-hero {
+  color: white;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(239, 181, 68, .95) 0 7%, transparent 7.2%),
+    linear-gradient(125deg, var(--navy) 0%, #19536e 52%, #257389 100%);
+}
+
+.schedule-hero .hero-inner { padding-bottom: 3.25rem; }
+.schedule-hero h1 { margin-bottom: .85rem; }
+.schedule-hero .hero-inner > p { max-width: 750px; }
+
+.meeting-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+  margin-top: 2rem;
+  color: #fff4cf;
+  font-size: .98rem;
+}
+
+.meeting-details span { padding-left: 1rem; border-left: 3px solid var(--gold); }
+.schedule-shell { padding-top: 2.5rem; }
+
+.schedule-note {
+  max-width: 980px;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--gold);
+  background: #fffaf0;
+  color: #354654;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  color: var(--ink);
+  font-size: .94rem;
+}
+
+.schedule-table col.week-col { width: 13%; }
+.schedule-table col.date-col { width: 9%; }
+.schedule-table col.class-col { width: 23%; }
+.schedule-table col.due-col { width: 23%; }
+
+.schedule-table th,
+.schedule-table td {
+  padding: .75rem .8rem;
+  border-right: 1px solid #bfc5c8;
+  border-bottom: 1px solid #bfc5c8;
+  vertical-align: top;
+  text-align: left;
+}
+
+.schedule-table tr > :last-child { border-right: 0; }
+.schedule-table tbody tr:last-child > * { border-bottom: 0; }
+
+.schedule-table thead th {
+  color: white;
+  background: var(--navy);
+  font-size: .85rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.schedule-table tbody tr:nth-child(even) { background: #fbfcfa; }
+.schedule-table tbody tr:hover { background: #f2f8f5; }
+.schedule-table tbody th { color: var(--navy); background: #f2f0e8; font-weight: 800; }
+.schedule-table tbody th span, .schedule-table tbody th small { display: block; }
+.schedule-table tbody th small, .schedule-table td small { margin-top: .25rem; color: var(--muted); font-size: .82rem; font-weight: 500; }
+.schedule-table td small { display: block; }
+.schedule-table .muted { color: var(--muted); font-size: .88rem; }
+.schedule-table .due { color: var(--coral); font-weight: 850; }
+.schedule-table .no-class { color: #6f3e39; background: #fff1e8; }
+.schedule-table .no-class strong { color: var(--coral); }
+
+.schedule-footnote { margin: 1.2rem 0 0; color: var(--muted); font-size: .92rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 760px) {
+  .meeting-details { display: grid; gap: .7rem; }
+  .schedule-shell { padding-top: 1.5rem; }
+  .schedule-table { font-size: .88rem; }
+}
+
+@media print {
+  .schedule-hero { background: var(--navy); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .table-wrap { overflow: visible; box-shadow: none; }
+  .schedule-table { min-width: 0; font-size: 8pt; }
+  .schedule-table th, .schedule-table td { padding: .45rem; }
+}
