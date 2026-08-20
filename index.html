@@ -21,6 +21,9 @@
     a { color: #1c4f8f; }
     .site-header, .hero { background: #0c2340; }
     .brand { color: #ae9142; letter-spacing: .08em; text-transform: uppercase; }
+    .course-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; color: #ae9142; font: 800 .9rem/1.2 Arial, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+    .course-nav a { color: #ae9142; text-decoration: none; }
+    .course-nav a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
     .hero { padding-top: 4.8rem; padding-bottom: 4.3rem; }
     .hero .eyebrow { color: #ae9142; }
     .kicker { color: #8c7535; }
@@ -63,7 +66,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html">SOC 2010 &middot; Open Course Textbook</a>
+      <nav class="course-nav" aria-label="Course navigation"><a href="syllabus-canvas.html">&larr; Course Syllabus</a><span>&middot;</span><a href="schedule-canvas.html">Course Schedule</a></nav>
     </div>
   </header>
 
@@ -72,7 +75,7 @@
       <div class="page-shell">
         <span class="eyebrow">An open course textbook</span>
         <h1>Introduction to Sociology<span class="title-subline">Seeing the Social World</span></h1>
-        <p class="book-deck">Twelve chapters connecting individual lives to relationships, institutions, history, culture, inequality, and social change.</p>
+        <p class="book-deck">Thirteen chapters connecting individual lives to relationships, institutions, history, culture, inequality, and social change.</p>
         <p class="author-line"><span>Author</span><strong>Miao Li, PhD</strong> &middot; Clemson University</p>
       </div>
     </section>
@@ -83,8 +86,8 @@
         <h2 id="start-heading">Choose a chapter.</h2>
         <p class="lead">Each chapter begins with a sociological question, develops competing theoretical perspectives, and connects concepts to concrete evidence. Read in sequence or return to a topic as the course develops.</p>
         <div class="textbook-stats" aria-label="Textbook features">
-          <span>12 numbered chapters</span>
-          <span>13 topic readings</span>
+          <span>13 numbered chapters</span>
+          <span>Three thematic parts</span>
           <span>Competing perspectives</span>
           <span>Chapter reviews</span>
         </div>
@@ -124,9 +127,9 @@
         </div>
         <div class="chapter-grid">
           <article class="chapter-card"><a href="textbook_chapters/chapter-10-religion.html"><span class="chapter-number">Chapter 10</span><h3>Religion</h3><p>Study belief, belonging, ritual, organization, secularization, religious markets, solidarity, meaning, and conflict.</p><span class="open-label">Read chapter &rarr;</span></a></article>
-          <article class="chapter-card"><a href="textbook_chapters/chapter-11-media-and-technology.html"><span class="chapter-number">Chapter 11A</span><h3>Media and Technology</h3><p>Examine sociotechnical systems, platforms, digital inequality, audiences, algorithms, surveillance, misinformation, and AI.</p><span class="open-label">Read chapter &rarr;</span></a></article>
-          <article class="chapter-card"><a href="textbook_chapters/chapter-11-health-and-medicine.html"><span class="chapter-number">Chapter 11B</span><h3>Health and Medicine</h3><p>Connect embodiment and illness meanings to social determinants, medicalization, professional power, and health-care systems.</p><span class="open-label">Read chapter &rarr;</span></a></article>
-          <article class="chapter-card"><a href="textbook_chapters/chapter-12-environmental-sociology.html"><span class="chapter-number">Chapter 12</span><h3>Environmental Sociology</h3><p>Analyze production, risk, ecological limits, waste, environmental justice, global governance, and collective action.</p><span class="open-label">Read chapter &rarr;</span></a></article>
+          <article class="chapter-card"><a href="textbook_chapters/chapter-11-media-and-technology.html"><span class="chapter-number">Chapter 11</span><h3>Media and Technology</h3><p>Examine sociotechnical systems, platforms, digital inequality, audiences, algorithms, surveillance, misinformation, and AI.</p><span class="open-label">Read chapter &rarr;</span></a></article>
+          <article class="chapter-card"><a href="textbook_chapters/chapter-11-health-and-medicine.html"><span class="chapter-number">Chapter 12</span><h3>Health and Medicine</h3><p>Connect embodiment and illness meanings to social determinants, medicalization, professional power, and health-care systems.</p><span class="open-label">Read chapter &rarr;</span></a></article>
+          <article class="chapter-card"><a href="textbook_chapters/chapter-12-environmental-sociology.html"><span class="chapter-number">Chapter 13</span><h3>Environmental Sociology</h3><p>Analyze production, risk, ecological limits, waste, environmental justice, global governance, and collective action.</p><span class="open-label">Read chapter &rarr;</span></a></article>
         </div>
       </section>
 
