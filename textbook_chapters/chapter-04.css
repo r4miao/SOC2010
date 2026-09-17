@@ -45,3 +45,13 @@ article > h4 { margin: 1.7rem 0 .7rem; font-size: 1.3rem; }
   .cycle-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cycle-arrow { right: -1.4rem; top: 45%; bottom: auto; transform: none; }
 }
+
+/* Plain-language callout for the bridging section */
+.plain-take { margin: 1.7rem 0; padding: 1.15rem 1.4rem; border-left: 6px solid var(--nd-gold); border-radius: 0 10px 10px 0; background: var(--nd-cream); box-shadow: var(--shadow); }
+.plain-take::before { content: 'In plain terms'; display: block; margin-bottom: .45rem; color: var(--nd-red); font: 850 .75rem/1.2 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+.plain-take p { margin: 0 0 .65rem; font-size: 1.06rem; }
+.plain-take p:last-child { margin-bottom: 0; }
+.plain-take strong { color: var(--nd-navy); }
+.handoff { margin: 1.5rem 0; padding-left: 1.1rem; border-left: 3px solid var(--nd-gold); color: var(--nd-navy-2); font-style: italic; }
+.layer-list { margin: .9rem 0; padding-left: 0; list-style: none; }
+.layer-list li { margin: .6rem 0; padding-left: 1.1rem; border-left: 3px solid var(--nd-blue-tint); }
