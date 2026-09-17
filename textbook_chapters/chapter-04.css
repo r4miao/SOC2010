@@ -1,5 +1,6 @@
 /* Chapter 04 additions; the shared textbook stylesheet remains the base. */
 h4 { color: var(--nd-navy); line-height: 1.25; }
+article > h4 { margin: 1.7rem 0 .7rem; font-size: 1.3rem; }
 .scholar-box h4 { margin: 0 0 .7rem; font-size: 1.45rem; }
 .example h4 { margin: 0 0 .7rem; font-size: 1.3rem; }
 .chapter-map { align-self: start; max-height: calc(100vh - 2.4rem); overflow-y: auto; }
@@ -12,11 +13,35 @@ h4 { color: var(--nd-navy); line-height: 1.25; }
 .boat-scroll svg { display: block; width: 100%; min-width: 640px; height: auto; }
 .coleman-figure figcaption { margin-top: .75rem; font-size: .94rem; line-height: 1.55; }
 .diagram-hint { display: none; margin: 0 0 .75rem; color: var(--nd-muted); font: .85rem/1.45 Arial, sans-serif; }
+.definition .practice-formula { margin: .8rem 0; color: var(--nd-navy); font: 700 1.15rem/1.5 Georgia, serif; letter-spacing: normal; text-transform: none; }
+.table-scroll { margin: 1.7rem 0; overflow-x: auto; }
+.table-scroll:focus-visible { outline: 3px solid #075ea8; outline-offset: 4px; }
+.bridge-table { min-width: 580px; margin: 0; line-height: 1.5; }
+.bridge-table caption { padding: 0 0 .8rem; color: var(--nd-navy); text-align: left; font: 700 1.1rem/1.4 Georgia, serif; }
+.bridge-table th[scope="row"] { width: 20%; color: var(--nd-navy); background: #eaf2f8; border: 1px solid #c6d2de; }
+.comparison-table { min-width: 680px; }
+.morphogenesis-figure { margin: 1.7rem 0; padding: 1.2rem; border: 2px solid var(--nd-gold); border-radius: 12px; background: #fff; }
+.cycle-timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.cycle-timeline li { position: relative; padding: .9rem; border-top: 4px solid var(--nd-navy-2); background: var(--nd-blue-tint); }
+.cycle-time { display: block; margin-bottom: .55rem; color: var(--nd-red); font: 800 .9rem/1.3 Arial, sans-serif; }
+.cycle-title { display: block; font-size: 1.05rem; line-height: 1.35; }
+.cycle-timeline p { margin: .65rem 0 0; font-size: .95rem; line-height: 1.5; }
+.cycle-arrow { position: absolute; right: -1.4rem; top: 45%; color: var(--nd-navy); font: 700 1.3rem/1 Arial, sans-serif; }
+.morphogenesis-figure figcaption { margin-top: 1rem; font-size: .94rem; line-height: 1.55; }
 @media (max-width: 1100px) { .diagram-hint { display: block; } }
 @media (max-width: 800px) { .chapter-map { max-height: none; overflow: visible; } }
+@media (max-width: 1000px) and (min-width: 801px), (max-width: 600px) {
+  .cycle-timeline { grid-template-columns: 1fr; }
+  .cycle-arrow { top: auto; right: calc(50% - .65rem); bottom: -1.4rem; transform: rotate(90deg); }
+}
 @media print {
   .coleman-figure { break-inside: avoid; box-shadow: none; }
   .boat-scroll { overflow: visible; }
   .boat-scroll svg { min-width: 0; }
   .diagram-hint { display: none; }
+  .table-scroll { overflow: visible; }
+  .bridge-table, .comparison-table { min-width: 0; font-size: .8rem; }
+  .morphogenesis-figure { break-inside: avoid; }
+  .cycle-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cycle-arrow { right: -1.4rem; top: 45%; bottom: auto; transform: none; }
 }
